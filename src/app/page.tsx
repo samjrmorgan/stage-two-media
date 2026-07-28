@@ -288,8 +288,8 @@ export default function Home() {
             <Reveal delay={100}>
               <div className="relative aspect-[4/3] overflow-hidden rounded-md">
                 <Image
-                  src="/images/work/documentary-zero-to-100/documentary-zero-to-100-09.jpg"
-                  alt="Portrait in a workshop, evening light"
+                  src="/images/about/sam-and-ellie-poolside-italy.jpg"
+                  alt="Sam Morgan and Ellie Harwood sitting poolside beneath a striped umbrella, framed by cypress trees in Italy"
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"
                   className="object-cover"

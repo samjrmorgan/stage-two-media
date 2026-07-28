@@ -27,6 +27,8 @@ export type WorkProject = {
   description: string[];
   services: string[];
   cover: WorkImage;
+  /** Optional alternate cover for grid cards (Home featured grid, /work grid, related-work) - falls back to `cover`. The case study hero always uses `cover`. */
+  gridCover?: WorkImage;
   gallery: WorkImage[];
   /** Shown on the Home page's featured grid. Keep to one per category. */
   featured?: boolean;
@@ -56,6 +58,10 @@ export const workProjects: WorkProject[] = [
     cover: {
       src: "/images/work/documentary-ghana/documentary-ghana-03.jpg",
       alt: "Silhouette of a woman in a doorway, Ghana",
+    },
+    gridCover: {
+      src: "/images/work/documentary-ghana/ghana-4x5-cover.jpg",
+      alt: "Four girls in patterned dresses seated on stone ruins under a stormy sky, Ghana",
     },
     gallery: [
       { src: "/images/work/documentary-ghana/documentary-ghana-03.jpg", alt: "Silhouette in a doorway, Ghana" },
@@ -315,6 +321,10 @@ export const workProjects: WorkProject[] = [
       src: "/images/work/weddings/weddings-06.jpg",
       alt: "Bride and groom embracing in golden light",
     },
+    gridCover: {
+      src: "/images/work/weddings/ben-mirjam-4x5-cover.jpg",
+      alt: "Bride and groom walking hand in hand through confetti",
+    },
     gallery: [
       { src: "/images/work/weddings/weddings-06.jpg", alt: "Bride and groom embracing in golden light" },
       { src: "/images/work/weddings/weddings-03.jpg", alt: "Bride and groom with wedding party" },
@@ -382,6 +392,10 @@ export const workProjects: WorkProject[] = [
     cover: {
       src: "/images/work/luxury-cruising/luxury-cruising-01.jpg",
       alt: "The superyacht Liberté cruising past an island near Auckland",
+    },
+    gridCover: {
+      src: "/images/work/luxury-cruising/luxury-cruising-4x5-cover.jpg",
+      alt: "Aerial view of the superyacht Liberté cutting through the water",
     },
     gallery: [
       { src: "/images/work/luxury-cruising/luxury-cruising-01.jpg", alt: "Liberté cruising past an island near Auckland" },

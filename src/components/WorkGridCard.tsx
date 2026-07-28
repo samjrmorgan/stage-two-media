@@ -3,12 +3,13 @@ import Link from "next/link";
 import { WorkProject } from "@/lib/work";
 
 export function WorkGridCard({ project, priority = false }: { project: WorkProject; priority?: boolean }) {
+  const cover = project.gridCover ?? project.cover;
   return (
     <Link href={`/work/${project.slug}`} className="group block cursor-pointer">
       <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-warmnavy">
         <Image
-          src={project.cover.src}
-          alt={project.cover.alt}
+          src={cover.src}
+          alt={cover.alt}
           fill
           priority={priority}
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"

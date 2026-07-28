@@ -25,6 +25,22 @@ export const journalPosts: JournalPost[] = [
     },
   },
   {
+    slug: "adjusting-to-extreme-conditions",
+    title: "Adjusting to extreme conditions",
+    tag: "On Location",
+    excerpt:
+      "From Cambodian humidity to the dry heat on the edges of the Sahara and Arabian deserts - every climate demands a different way of working.",
+    body: [
+      "No two locations put the same strain on a shoot. The thick humidity of Vietnam and Cambodia fogs lenses the moment you step outside an air-conditioned room, draws condensation inside housings, and turns a lightweight kit list into a constant battle against moisture.",
+      "Out on the dry edges of the Sahara and the Arabian desert, the problem flips entirely. Heat radiates off sand and stone well past sunset, gear overheats in direct sun, and dust finds its way into every seal and dial no matter how careful you are.",
+      "The fix is never one kit - it's knowing which problem you're solving for before you land. Silica packs and lens cloths for the humidity. Shade discipline, timing around the worst of the heat, and a proper clean-down routine for the dust. Adjusting fast is just part of the job.",
+    ],
+    cover: {
+      src: "/images/journal/adjusting-to-extreme-conditions.jpg",
+      alt: "Sam Morgan walking through a hazy, dust-filled landscape of baobab trees, camera in hand",
+    },
+  },
+  {
     slug: "why-we-made-zero-to-100",
     title: "Why we made Zero to 100",
     tag: "Behind The Scenes",
@@ -81,6 +97,22 @@ export const journalPosts: JournalPost[] = [
     cover: {
       src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-01.jpg",
       alt: "Veteran in his workshop",
+    },
+  },
+  {
+    slug: "why-we-shoot-sony",
+    title: "Why we shoot Sony",
+    tag: "Craft",
+    excerpt:
+      "A versatile system built for guerrilla-style shooting, with low-light performance nothing else in its class matches.",
+    body: [
+      "Every system we've tested comes back to the same shortlist of reasons Sony stays in the bag: a body small enough to move like one person, not a crew, and a sensor that keeps delivering usable footage well after the light most cameras need has gone.",
+      "That combination is what makes guerrilla-style shooting possible in the first place - ducking into a crowded alley, following a subject through a doorway, working a scene without a lighting rig to set up first. The gear has to disappear into the moment, not slow it down.",
+      "Low light is where it really separates itself. Dusk interiors, dimly lit workshops, a single window's worth of light - situations that would force most systems onto a tripod with a light kit still hold up handheld, in colour, with detail intact. For documentary work shot on the move, that's not a nice-to-have, it's the difference between getting the shot and not.",
+    ],
+    cover: {
+      src: "/images/journal/why-we-shoot-sony.jpg",
+      alt: "Sam Morgan walking through a narrow alleyway on location, documentary-style",
     },
   },
   {
@@ -210,6 +242,22 @@ export const journalPosts: JournalPost[] = [
     cover: {
       src: "/images/work/documentary-cambodia/documentary-cambodia-07.jpg",
       alt: "Angkor Wat reflected in water at sunset, Cambodia",
+    },
+  },
+  {
+    slug: "where-ai-fits-in-our-workflow",
+    title: "Where AI fits in our workflow (and where it doesn't)",
+    tag: "Studio",
+    excerpt:
+      "Every piece of content we deliver is human-made. AI is one tool in the belt - never the one holding the camera.",
+    body: [
+      "Every piece of content we deliver is produced by us - shot, directed, edited and graded by hand. That doesn't change. What has changed is that a small set of AI tools now sit alongside everything else in the kit, used the same way we'd use any other tool: to solve a specific, practical problem.",
+      "In practice that means things like smoothing a transition between two shots that wouldn't otherwise cut cleanly, or generatively filling the edges of a frame when we're reworking a piece into a new aspect ratio and the original footage doesn't stretch that far. Small, technical, mostly invisible fixes - not shortcuts around doing the work.",
+      "It's never the centre of a piece, and it's never a replacement for a real shoot, a real edit or a real story. It's there to enhance something we've already made, only when we judge it's actually needed - nothing more.",
+    ],
+    cover: {
+      src: "/images/work/mca-wallaroos/mca-wallaroos-04.jpg",
+      alt: "Stage Two crew filming pitchside with a gimbal rig",
     },
   },
 ];

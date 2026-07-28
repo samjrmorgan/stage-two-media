@@ -55,16 +55,14 @@ export default function AboutPage() {
         </Reveal>
 
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <Reveal>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-md">
-              <Image
-                src="/images/work/documentary-zero-to-100/documentary-zero-to-100-05.jpg"
-                alt="A production crew setting up a shot trackside"
-                fill
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover"
-              />
-            </div>
+          <Reveal className="relative aspect-[4/3] overflow-hidden rounded-md">
+            <Image
+              src="/images/about/sam-airport-departure.jpg"
+              alt="Sam Morgan smiling at an airport, backpack loaded, departing on assignment"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
           </Reveal>
           <Reveal delay={100}>
             <p className="font-display text-2xl md:text-3xl leading-[1.3] text-offwhite mb-6">
@@ -141,7 +139,7 @@ export default function AboutPage() {
         </div>
 
         {/* Quote / signature */}
-        <div className="mt-24 md:mt-32 border-t border-white/10 pt-24 md:pt-32">
+        <div className="mt-24 md:mt-32">
           <Reveal>
             <blockquote className="font-display text-3xl md:text-5xl leading-[1.25] text-offwhite max-w-4xl">
               &ldquo;We want clients to feel pumped, excited, and euphoric about
