@@ -15,4 +15,6 @@ export const clientLogos: ClientLogo[] = [
   { name: "International Democratic Union", logo: "/brand/clients/idu.png", aspect: 800 / 300 },
   { name: "Wallaroos", logo: "/brand/clients/wallaroos.png", aspect: 800 / 190 },
   { name: "Launchpad Digital", logo: "/brand/clients/launchpad.png", aspect: 800 / 220 },
+  { name: "Pead PR", logo: "/brand/clients/pead-pr.png", aspect: 789 / 325 },
+  { name: "Sir Peter Blake Foundation", logo: "/brand/clients/blake-foundation.png", aspect: 1135 / 368 },
 ];

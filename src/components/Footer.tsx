@@ -24,6 +24,7 @@ const columns = [
     links: [
       { href: "https://instagram.com/stagetwo.media", label: "Instagram" },
       { href: "https://www.facebook.com/stagetwomedia", label: "Facebook" },
+      { href: "https://www.linkedin.com/company/stagetwomedia", label: "LinkedIn" },
       { href: "https://vimeo.com/stagetwomediahouse", label: "Vimeo" },
     ],
   },

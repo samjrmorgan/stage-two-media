@@ -182,6 +182,23 @@ export const journalPosts: JournalPost[] = [
     },
   },
   {
+    slug: "one-red-sock-each",
+    title: "One red sock each: how we won the Sir Peter Blake Foundation",
+    tag: "Studio",
+    excerpt:
+      "We're covering the Sir Peter Blake Foundation's 2026 award recipients - and the story of how we got the meeting is our new favourite icebreaker.",
+    body: [
+      "We're thrilled to share that Stage Two has been engaged by the Sir Peter Blake Foundation to cover its 2026 award recipients - a programme that celebrates New Zealanders carrying forward Sir Peter's legacy of leadership and environmental action.",
+      "The red sock is symbolic to Sir Peter Blake, worn in his memory by those who carry his legacy forward. Walking into the pitch meeting, we could only find one spare pair between us - so we each put on a single red sock and went in anyway.",
+      "\"We've got one foot in the door,\" we told the room. \"If we win this, we'll put the other sock on.\" It broke the ice instantly - and not long after, we got to put the second sock on.",
+      "We can't wait to get started telling these stories properly later in the year.",
+    ],
+    cover: {
+      src: "/images/journal/blake-foundation-ocean.jpg",
+      alt: "Deep blue open ocean water, evoking Sir Peter Blake's seafaring legacy",
+    },
+  },
+  {
     slug: "why-stage-two-turns-down-some-briefs",
     title: "Why Stage Two turns down some briefs",
     tag: "Studio",

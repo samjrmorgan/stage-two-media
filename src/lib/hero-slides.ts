@@ -1,12 +1,39 @@
 export type HeroSlide = {
   src: string;
   alt: string;
+  award?: {
+    label: string;
+    detail: string;
+    badges: { src: string; alt: string }[];
+  };
 };
 
 export const heroSlides: HeroSlide[] = [
   {
     src: "/images/hero/switzerland-alps-mountain-lake-landscape.jpg",
     alt: "Cinematic aerial landscape of a turquoise alpine lake surrounded by the Swiss Alps",
+  },
+  {
+    src: "/images/hero/primary-colours-senegal.jpg",
+    alt: "\"Primary Colours of Senegal\" - a man walking past a red curtained doorway in a Senegalese village",
+    award: {
+      label: "Award-winning photography",
+      detail: "\"Primary Colours of Senegal\", shot on location with World Vision",
+      badges: [
+        {
+          src: "/brand/awards/refocus-peoples-vote.png",
+          alt: "People's Vote Award, Travel - reFocus Awards 2025 Color Photography Contest",
+        },
+        {
+          src: "/brand/awards/refocus-honorable-mention.png",
+          alt: "Honorable Mention, Street - reFocus Awards 2025 Color Photography Contest",
+        },
+        {
+          src: "/brand/awards/chromatic-honorable-mention.png",
+          alt: "Honorable Mention - Chromatic Photography Awards 2025",
+        },
+      ],
+    },
   },
   {
     src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-11.jpg",
