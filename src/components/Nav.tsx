@@ -35,14 +35,14 @@ export function Nav() {
   }, [open]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        scrolled || open
-          ? "bg-black/90 backdrop-blur-sm border-b border-white/10"
-          : "bg-gradient-to-b from-black/60 to-transparent border-b border-transparent"
-      }`}
-    >
-      <Container className="flex items-center justify-between py-4">
+    <header className="fixed top-0 left-0 right-0 z-50">
+      <div
+        className={`absolute inset-0 bg-black/90 backdrop-blur-sm border-b border-white/10 transition-opacity duration-300 ${
+          scrolled || open ? "opacity-100" : "opacity-0"
+        }`}
+        aria-hidden
+      />
+      <Container className="relative flex items-center justify-between py-4">
         <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="Stage Two - Home">
           <Logo variant="offwhite" className="h-10 w-auto md:h-12" />
         </Link>

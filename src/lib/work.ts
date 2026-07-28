@@ -8,7 +8,8 @@ export type FilterCategory =
   | "Documentary & Legacy"
   | "Weddings"
   | "Brand Stories"
-  | "Advocacy";
+  | "Advocacy"
+  | "Events";
 
 export type WorkProject = {
   slug: string;
@@ -331,6 +332,7 @@ export const workProjects: WorkProject[] = [
     category: "Fleet & Facility Content",
     filter: "Brand Stories",
     kind: "film",
+    featured: true,
     year: "2024",
     location: "Auckland, New Zealand",
     summary:
@@ -393,6 +395,39 @@ export const workProjects: WorkProject[] = [
     ],
   },
   {
+    slug: "presence-io",
+    client: "Presence.io",
+    title: "Presence.io - Expand North Star",
+    category: "Event Coverage",
+    filter: "Brand Stories",
+    kind: "film",
+    year: "2023",
+    location: "Dubai, United Arab Emirates",
+    summary:
+      "Multi-day event coverage of Presence.io at Expand North Star 2023 in Dubai - expo-floor content, delegate portraits and behind-the-scenes moments across the three-day summit.",
+    cardCopy:
+      "Multi-day coverage of Presence.io at Expand North Star 2023, from the expo floor to the Dubai waterfront.",
+    description: [
+      "Stage Two travelled to Dubai to cover Presence.io's presence at Expand North Star 2023, one of the city's major tech and innovation summits, capturing the brand's booth, staff and delegate interactions across the show floor.",
+      "Coverage ran across all three days of the event, delivering same-day content alongside a full library of expo photography and portraiture for the brand to draw on long after the summit wrapped.",
+    ],
+    services: ["Event Filming", "Photography", "Multi-Camera Production", "Social Cutdowns"],
+    cover: {
+      src: "/images/work/presence-io/presence-io-01.jpg",
+      alt: "A Presence team member looking out over Dubai Marina",
+    },
+    gallery: [
+      { src: "/images/work/presence-io/presence-io-01.jpg", alt: "A Presence team member looking out over Dubai Marina" },
+      { src: "/images/work/presence-io/presence-io-02.jpg", alt: "The Presence team lined up along the Dubai Marina waterfront" },
+      { src: "/images/work/presence-io/presence-io-03.jpg", alt: "Presence staff on the expo booth floor" },
+      { src: "/images/work/presence-io/presence-io-04.jpg", alt: "Delegates in conversation at the Presence booth" },
+      { src: "/images/work/presence-io/presence-io-05.jpg", alt: "Delegates seated for a keynote session" },
+      { src: "/images/work/presence-io/presence-io-06.jpg", alt: "Portrait of an attendee at the summit" },
+      { src: "/images/work/presence-io/presence-io-07.jpg", alt: "Sunset through palm trees in Dubai" },
+      { src: "/images/work/presence-io/presence-io-08.jpg", alt: "The Dubai Marina skyline at dusk" },
+    ],
+  },
+  {
     slug: "mca-wallaroos",
     client: "Minerals Council of Australia",
     title: "MCA × Wallaroos",
@@ -423,6 +458,130 @@ export const workProjects: WorkProject[] = [
       { src: "/images/work/mca-wallaroos/mca-wallaroos-05.jpg", alt: "Player mid-action catching a pass" },
       { src: "/images/work/mca-wallaroos/mca-wallaroos-06.jpg", alt: "Players laughing between takes" },
       { src: "/images/work/mca-wallaroos/mca-wallaroos-07.jpg", alt: "Team lineup on the pitch with the crew" },
+    ],
+  },
+  {
+    slug: "mca-fuel-tax-credit",
+    client: "Minerals Council of Australia",
+    title: "MCA - Fuel Tax Credit",
+    category: "Industry Advocacy",
+    filter: "Advocacy",
+    kind: "film",
+    year: "2025",
+    location: "Queensland & Western Australia",
+    summary:
+      "A multi-location advocacy film for the Minerals Council of Australia, produced via Launchpad Digital, showing how the fuel tax credit scheme supports industries far beyond mining - from grain farming to reef tourism.",
+    cardCopy:
+      "A multi-location advocacy film on the fuel tax credit scheme, shot across farms, the Great Barrier Reef and regional Australia.",
+    description: [
+      "Stage Two filmed on location across regional Queensland and Western Australia for a Minerals Council of Australia campaign on the fuel tax credit scheme, produced via agency Launchpad Digital.",
+      "The brief called for proof that the scheme reaches well beyond the mining sector - so filming covered a working grain harvest and grower interview, a marine research and reef tourism operation in the Whitsundays, and the regional industries in between.",
+      "The result is a multi-location advocacy piece built from real operators and real footage, delivered for broadcast and digital placement.",
+    ],
+    services: ["Multi-Location Filming", "Interview Filming", "Aerial & Drone", "Editing"],
+    cover: {
+      src: "/images/work/mca-fuel-tax-credit/mca-fuel-tax-credit-02.jpg",
+      alt: "A combine harvester working a wheat field at harvest time",
+    },
+    gallery: [
+      { src: "/images/work/mca-fuel-tax-credit/mca-fuel-tax-credit-02.jpg", alt: "A combine harvester working a wheat field at harvest time" },
+      { src: "/images/work/mca-fuel-tax-credit/mca-fuel-tax-credit-03.jpg", alt: "Grain silos on a regional Australian farm" },
+      { src: "/images/work/mca-fuel-tax-credit/mca-fuel-tax-credit-04.jpg", alt: "Close-up of ripe wheat in a field" },
+      { src: "/images/work/mca-fuel-tax-credit/mca-fuel-tax-credit-07.jpg", alt: "A farmer being interviewed in front of machinery on his property" },
+      { src: "/images/work/mca-fuel-tax-credit/mca-fuel-tax-credit-01.jpg", alt: "Aerial view of a coastal resort in the Whitsundays" },
+      { src: "/images/work/mca-fuel-tax-credit/mca-fuel-tax-credit-08.jpg", alt: "The Australian red ensign flying from the stern of a research boat" },
+      { src: "/images/work/mca-fuel-tax-credit/mca-fuel-tax-credit-05.jpg", alt: "A diver descending into the Great Barrier Reef" },
+      { src: "/images/work/mca-fuel-tax-credit/mca-fuel-tax-credit-06.jpg", alt: "A research diver preparing gear aboard a boat" },
+    ],
+  },
+  {
+    slug: "topham-guerin-dominican-republic",
+    client: "Topham Guerin",
+    title: "Topham Guerin - Dominican Republic",
+    category: "International Production",
+    filter: "Advocacy",
+    kind: "film",
+    year: "2024",
+    location: "Santo Domingo & Santiago, Dominican Republic",
+    summary:
+      "Multi-week, multi-camera content production on location across the Dominican Republic for international communications agency Topham Guerin.",
+    cardCopy:
+      "Multi-week, multi-camera production on location in the Dominican Republic, covering public events and location b-roll.",
+    description: [
+      "Stage Two spent several weeks on the ground in Santo Domingo and Santiago producing content for Topham Guerin, an international political and public communications agency.",
+      "The brief covered public events, cultural context and location b-roll across the country's historic Zona Colonial and beyond, delivered as a fast-turnaround content library for an international client working to a live schedule.",
+    ],
+    services: ["On-Location Filming", "Multi-Camera Production", "Photography", "Rapid-Turnaround Editing"],
+    cover: {
+      src: "/images/work/topham-guerin-dr/topham-guerin-dr-01.jpg",
+      alt: "Aerial view of a coastal city in the Dominican Republic",
+    },
+    gallery: [
+      { src: "/images/work/topham-guerin-dr/topham-guerin-dr-01.jpg", alt: "Aerial view of a coastal city in the Dominican Republic" },
+      { src: "/images/work/topham-guerin-dr/topham-guerin-dr-02.jpg", alt: "Colourful street scene in the Zona Colonial, Santo Domingo" },
+      { src: "/images/work/topham-guerin-dr/topham-guerin-dr-03.jpg", alt: "Historic colonial building facade" },
+      { src: "/images/work/topham-guerin-dr/topham-guerin-dr-04.jpg", alt: "A woman singing at a historic gate" },
+      { src: "/images/work/topham-guerin-dr/topham-guerin-dr-05.jpg", alt: "Dancers in traditional Dominican dress" },
+      { src: "/images/work/topham-guerin-dr/topham-guerin-dr-06.jpg", alt: "Colonial-era statue in a plaza" },
+      { src: "/images/work/topham-guerin-dr/topham-guerin-dr-07.jpg", alt: "Colourful festival decorations" },
+      { src: "/images/work/topham-guerin-dr/topham-guerin-dr-08.jpg", alt: "A local man in front of a corner store" },
+    ],
+  },
+  {
+    slug: "idu-wellington",
+    client: "International Democratic Union",
+    title: "IDU Forum - Wellington",
+    category: "Event Production",
+    filter: "Events",
+    kind: "film",
+    year: "2024",
+    location: "Wellington, New Zealand",
+    summary:
+      "Multi-camera event production for the 2024 IDU Forum Asia-Pacific, a multi-day international conference held in Wellington.",
+    cardCopy:
+      "Multi-camera coverage of a multi-day international forum, from keynote stage to panel sessions.",
+    description: [
+      "Stage Two provided full event production for the 2024 IDU Forum Asia-Pacific in Wellington, covering keynote addresses, panel discussions and the surrounding events across the multi-day conference.",
+      "Coverage ran across multiple stages and formats - stage photography, multi-camera panel filming, and a same-event wrap-up video - delivered on a live conference schedule.",
+    ],
+    services: ["Event Filming", "Multi-Camera Production", "Stage Photography", "Wrap-Up Video"],
+    cover: {
+      src: "/images/work/idu-wellington/idu-wellington-01.jpg",
+      alt: "A speaker addressing the 2024 IDU Forum Asia-Pacific from the keynote stage",
+    },
+    gallery: [
+      { src: "/images/work/idu-wellington/idu-wellington-01.jpg", alt: "A speaker addressing the 2024 IDU Forum Asia-Pacific from the keynote stage" },
+      { src: "/images/work/idu-wellington/idu-wellington-02.jpg", alt: "A panel discussion on the IDU Forum stage" },
+      { src: "/images/work/idu-wellington/idu-wellington-03.jpg", alt: "Delegates in conversation at the forum reception" },
+      { src: "/images/work/idu-wellington/idu-wellington-04.jpg", alt: "Delegates in conversation at Premier House" },
+    ],
+  },
+  {
+    slug: "mca-wirna-awards",
+    client: "Minerals Council of Australia",
+    title: "Women in Resources National Awards",
+    category: "Event Photography",
+    filter: "Events",
+    kind: "photo",
+    year: "2024",
+    location: "Australia",
+    summary:
+      "Event photography for the BHP-presented Women in Resources National Awards, held during Minerals Week to recognise women across the Australian resources sector.",
+    cardCopy:
+      "Event photography for a national awards night recognising women across the Australian resources sector.",
+    description: [
+      "Stage Two provided event photography for the Women in Resources National Awards, part of the Minerals Council of Australia's annual Minerals Week programme.",
+      "Coverage focused on the step-and-repeat and award presentations, delivering a fast-turnaround gallery for the Minerals Council and its award partners.",
+    ],
+    services: ["Event Photography"],
+    cover: {
+      src: "/images/work/mca-wirna-awards/mca-wirna-awards-01.jpg",
+      alt: "Award recipients and presenters posing together at the Women in Resources National Awards",
+    },
+    gallery: [
+      { src: "/images/work/mca-wirna-awards/mca-wirna-awards-01.jpg", alt: "Award recipients and presenters posing together at the Women in Resources National Awards" },
+      { src: "/images/work/mca-wirna-awards/mca-wirna-awards-02.jpg", alt: "Group photo in front of the awards step-and-repeat" },
+      { src: "/images/work/mca-wirna-awards/mca-wirna-awards-03.jpg", alt: "Award recipients and presenters at the evening's ceremony" },
     ],
   },
 ];

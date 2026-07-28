@@ -45,10 +45,10 @@ export default function ContactPage() {
                   </dt>
                   <dd>
                     <a
-                      href="tel:+64212358273"
+                      href="tel:+64212262822"
                       className="text-offwhite hover:text-accent transition-colors cursor-pointer"
                     >
-                      +64 21 235 8273
+                      +64 21 226 2822
                     </a>
                   </dd>
                 </div>

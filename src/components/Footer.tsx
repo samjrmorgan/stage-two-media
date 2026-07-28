@@ -16,7 +16,7 @@ const columns = [
     heading: "Contact",
     links: [
       { href: "mailto:sam@stagetwo.media", label: "sam@stagetwo.media" },
-      { href: "tel:+64212358273", label: "+64 21 235 8273" },
+      { href: "tel:+64212262822", label: "+64 21 226 2822" },
     ],
   },
   {

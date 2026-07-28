@@ -55,6 +55,146 @@ export const journalPosts: JournalPost[] = [
       alt: "Bride and groom embracing under an archway",
     },
   },
+  {
+    slug: "what-to-ask-before-hiring-a-video-production-company",
+    title: "What to ask before hiring a video production company",
+    tag: "Craft",
+    excerpt:
+      "A short buyer's guide - the questions that actually tell you who you're hiring.",
+    body: [
+      "Who's actually on set, what happens if the weather or the schedule changes, and who owns the raw footage afterwards - the answers say more than any showreel does.",
+    ],
+    cover: {
+      src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-05.jpg",
+      alt: "A production crew setting up a shot trackside",
+    },
+  },
+  {
+    slug: "the-gear-we-pack-for-a-solo-documentary-shoot",
+    title: "The gear we actually pack for a solo documentary shoot",
+    tag: "Craft",
+    excerpt:
+      "What fits in one bag when you're both the crew and the camera operator.",
+    body: [
+      "Every expedition forces the same question: what earns its place in the bag when you're carrying it yourself, through customs, for two weeks. The kit list has gotten shorter every trip - not because we compromise on quality, but because we've learned exactly what we actually use.",
+    ],
+    cover: {
+      src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-01.jpg",
+      alt: "Veteran in his workshop",
+    },
+  },
+  {
+    slug: "running-a-two-person-production-studio",
+    title: "Running a two-person production studio: the honest version",
+    tag: "Studio",
+    excerpt:
+      "Sam and Ellie on what actually changes when there are two of you instead of one.",
+    body: [
+      "More coverage, less compromise on bigger briefs, and someone else in the edit suite to tell you when a cut isn't working yet. It's not a bigger studio - it's the same lean approach, with a second set of hands.",
+    ],
+    cover: {
+      src: "/images/work/mca-wallaroos/mca-wallaroos-04.jpg",
+      alt: "Stage Two crew filming pitchside with a gimbal rig",
+    },
+  },
+  {
+    slug: "why-we-shoot-stills-and-video-on-the-same-day",
+    title: "Why we shoot stills and video on the same day",
+    tag: "Craft",
+    excerpt:
+      "One crew, one day, two full deliverables - here's why that's not a compromise.",
+    body: [
+      "Splitting photography and video across two separate shoots doubles the disruption for everyone in front of the camera. Shooting both in the same pass means the stills and the film come from the same real moments, not a recreation of them.",
+    ],
+    cover: {
+      src: "/images/work/weddings/weddings-03.jpg",
+      alt: "Bride and groom with wedding party",
+    },
+  },
+  {
+    slug: "how-much-does-a-wedding-film-cost-in-nz",
+    title: "How much does a wedding film actually cost in NZ?",
+    tag: "Craft",
+    excerpt:
+      "A straight answer to the question most couples are too polite to ask outright.",
+    body: [
+      "Pricing depends on coverage hours, whether you want a same-week highlight as well as a full feature, and travel - but we'd rather give you a real range up front than make you ask twice.",
+    ],
+    cover: {
+      src: "/images/work/weddings/weddings-01.jpg",
+      alt: "Tuscan villa surrounded by cypress trees",
+    },
+  },
+  {
+    slug: "how-much-does-a-corporate-video-cost-in-nz",
+    title: "How much does a corporate video cost in New Zealand?",
+    tag: "Craft",
+    excerpt:
+      "What actually drives the price of a brand or corporate film, beyond the day rate.",
+    body: [
+      "Crew size, locations, how many deliverables you need cut down from the same shoot, and turnaround time move the number more than anything else. We'd rather walk you through it than leave you guessing.",
+    ],
+    cover: {
+      src: "/images/work/nexus-logistics/nexus-logistics-03.jpg",
+      alt: "Ground-level wide shot of stacked containers and a reach-stacker",
+    },
+  },
+  {
+    slug: "one-operator-vs-a-full-crew",
+    title: "One operator vs. a full crew: when each makes sense",
+    tag: "Studio",
+    excerpt:
+      "Bigger isn't always better - here's how we actually size a crew to a brief.",
+    body: [
+      "A solo operator gets closer to a subject and costs less. A full crew unlocks bigger setups, more angles, and more coverage per day. Neither is the default - the brief decides.",
+    ],
+    cover: {
+      src: "/images/work/mca-wallaroos/mca-wallaroos-05.jpg",
+      alt: "Player mid-action catching a pass",
+    },
+  },
+  {
+    slug: "same-week-wedding-edits-how-we-do-it",
+    title: "Same-week wedding edits: how we do it and why",
+    tag: "Craft",
+    excerpt:
+      "The workflow behind getting a highlight film out while the day is still fresh.",
+    body: [
+      "It comes down to editing on location where we can, and knowing which moments matter before we've even left the wedding. The full feature gets the slower treatment later - the highlight is about speed.",
+    ],
+    cover: {
+      src: "/images/work/weddings/weddings-11.jpg",
+      alt: "Guests dancing under string lights",
+    },
+  },
+  {
+    slug: "1200-exports-later",
+    title: "1,200 exports later: what we've learned about finishing a film properly",
+    tag: "Studio",
+    excerpt:
+      "What actually changes between a good edit and a finished one.",
+    body: [
+      "Grading, sound, and export settings tuned for wherever the film is actually going to live - a big screen, Instagram, a boardroom TV - matter more than people expect. Most of what separates a finished film from a good rough cut happens after the edit is 'done'.",
+    ],
+    cover: {
+      src: "/images/work/harry-mack-interview/harry-mack-interview-04.jpg",
+      alt: "Studio set detail, neon sign and record shelf",
+    },
+  },
+  {
+    slug: "why-stage-two-turns-down-some-briefs",
+    title: "Why Stage Two turns down some briefs",
+    tag: "Studio",
+    excerpt:
+      "The six kinds of stories we chase, and why we've stopped trying to be a production company for everything.",
+    body: [
+      "Saying no to work outside our six categories is what keeps the work inside them good. It's a harder discipline than it sounds, especially early on - but it's the reason the studio has a voice at all.",
+    ],
+    cover: {
+      src: "/images/work/documentary-cambodia/documentary-cambodia-07.jpg",
+      alt: "Angkor Wat reflected in water at sunset, Cambodia",
+    },
+  },
 ];
 
 export function getJournalPost(slug: string) {

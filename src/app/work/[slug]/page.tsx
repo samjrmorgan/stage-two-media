@@ -7,6 +7,7 @@ import { Kicker } from "@/components/Kicker";
 import { Reveal } from "@/components/Reveal";
 import { WorkGridCard } from "@/components/WorkGridCard";
 import { VimeoEmbed } from "@/components/VimeoEmbed";
+import { CaseStudyFloatNav } from "@/components/CaseStudyFloatNav";
 import { getWorkProject, workProjects } from "@/lib/work";
 
 export function generateStaticParams() {
@@ -38,8 +39,14 @@ export default async function WorkCaseStudy({
 
   const related = workProjects.filter((p) => p.slug !== project.slug).slice(0, 3);
 
+  const currentIndex = workProjects.findIndex((p) => p.slug === project.slug);
+  const prevProject = workProjects[(currentIndex - 1 + workProjects.length) % workProjects.length];
+  const nextProject = workProjects[(currentIndex + 1) % workProjects.length];
+
   return (
     <div className="bg-black">
+      <CaseStudyFloatNav prevHref={`/work/${prevProject.slug}`} nextHref={`/work/${nextProject.slug}`} />
+
       {/* Hero */}
       <section className="relative h-[80svh] min-h-[520px] w-full overflow-hidden">
         <Image
@@ -154,6 +161,56 @@ export default async function WorkCaseStudy({
                 </div>
               </Reveal>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Prev / Next */}
+      <section id="case-study-prev-next" className="border-t border-white/10">
+        <Container>
+          <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+            <Link
+              href={`/work/${prevProject.slug}`}
+              className="group flex items-center gap-4 py-8 sm:pr-8 cursor-pointer"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden
+                className="shrink-0 transition-transform group-hover:-translate-x-1"
+              >
+                <path d="M17 7L7 17M7 17H15M7 17V9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <div>
+                <p className="text-xs uppercase tracking-[0.15em] text-steel mb-1">Previous</p>
+                <p className="font-display text-lg text-offwhite group-hover:text-offwhite/80 transition-colors">
+                  {prevProject.title}
+                </p>
+              </div>
+            </Link>
+            <Link
+              href={`/work/${nextProject.slug}`}
+              className="group flex items-center justify-between gap-4 py-8 sm:pl-8 cursor-pointer sm:text-right"
+            >
+              <div className="sm:order-1 sm:ml-auto">
+                <p className="text-xs uppercase tracking-[0.15em] text-steel mb-1">Next</p>
+                <p className="font-display text-lg text-offwhite group-hover:text-offwhite/80 transition-colors">
+                  {nextProject.title}
+                </p>
+              </div>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden
+                className="shrink-0 sm:order-2 transition-transform group-hover:translate-x-1"
+              >
+                <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Link>
           </div>
         </Container>
       </section>
