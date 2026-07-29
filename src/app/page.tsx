@@ -334,7 +334,7 @@ export default function Home() {
       <section className="relative bg-warmnavy py-28 md:py-36 overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <Image
-            src="/images/work/advocacy/advocacy-08.jpg"
+            src="/images/work/documentary-bangladesh/bangladesh-cta-cover.jpg"
             alt=""
             aria-hidden
             fill

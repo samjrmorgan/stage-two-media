@@ -17,4 +17,5 @@ export const clientLogos: ClientLogo[] = [
   { name: "Launchpad Digital", logo: "/brand/clients/launchpad.png", aspect: 800 / 220 },
   { name: "Pead PR", logo: "/brand/clients/pead-pr.png", aspect: 789 / 325 },
   { name: "Sir Peter Blake Foundation", logo: "/brand/clients/blake-foundation.png", aspect: 1135 / 368 },
+  { name: "Thrive Health", logo: "/brand/clients/thrive-health.png", aspect: 1911 / 840 },
 ];

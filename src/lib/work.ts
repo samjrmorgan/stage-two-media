@@ -442,6 +442,40 @@ export const workProjects: WorkProject[] = [
     ],
   },
   {
+    slug: "thrive-health",
+    client: "Thrive Health",
+    title: "Thrive Health - Waiake Medical",
+    category: "Brand & Launch Photography",
+    filter: "Brand Stories",
+    kind: "photo",
+    year: "2025",
+    location: "Waiake, Auckland, New Zealand",
+    summary:
+      "Full brand photography and launch-night coverage for Waiake Medical, a new clinic opening under the Thrive Health group in Auckland.",
+    cardCopy:
+      "Brand photography and launch-night coverage for a new Thrive Health medical clinic in Auckland.",
+    description: [
+      "Stage Two shot a complete photography package for the opening of Waiake Medical, a new clinic under the Thrive Health group - covering the building, signage and every clinical space from reception through to consult and treatment rooms.",
+      "Coverage continued into the evening for the clinic's launch event, capturing the practice's doctors and staff greeting guests, family and colleagues on opening night.",
+      "The result is a single, consistent asset library Thrive Health can draw on for the practice's website, signage and marketing - real spaces and real people, not stock photography.",
+    ],
+    services: ["Brand Photography", "Interior & Exterior Photography", "Event Photography"],
+    cover: {
+      src: "/images/work/thrive-health/thrive-health-01.jpg",
+      alt: "Waiake Medical signage on the clinic's green-tiled exterior",
+    },
+    gallery: [
+      { src: "/images/work/thrive-health/thrive-health-01.jpg", alt: "Waiake Medical signage on the clinic's green-tiled exterior" },
+      { src: "/images/work/thrive-health/thrive-health-02.jpg", alt: "Waiake Medical monument sign surrounded by greenery" },
+      { src: "/images/work/thrive-health/thrive-health-03.jpg", alt: "Reception desk inside the clinic" },
+      { src: "/images/work/thrive-health/thrive-health-04.jpg", alt: "A consult room with desk and examination table" },
+      { src: "/images/work/thrive-health/thrive-health-05.jpg", alt: "A Thrive-branded car parked outside the clinic" },
+      { src: "/images/work/thrive-health/thrive-health-06.jpg", alt: "Interior clinic space with Waiake Medical wall signage and flowers" },
+      { src: "/images/work/thrive-health/thrive-health-07.jpg", alt: "Guests mingling at the clinic's launch night" },
+      { src: "/images/work/thrive-health/thrive-health-08.jpg", alt: "Guests laughing together at the launch night event" },
+    ],
+  },
+  {
     slug: "mca-wallaroos",
     client: "Minerals Council of Australia",
     title: "MCA × Wallaroos",

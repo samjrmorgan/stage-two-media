@@ -6,6 +6,7 @@ import { Kicker } from "@/components/Kicker";
 import { Reveal } from "@/components/Reveal";
 import { WorldMap } from "@/components/WorldMap";
 import { AnimatedNumber } from "@/components/AnimatedNumber";
+import { TeamTimeline } from "@/components/TeamTimeline";
 
 export const metadata: Metadata = {
   title: "About",
@@ -158,6 +159,22 @@ export default function AboutPage() {
                 <p className="text-steel text-sm">Director, Stage Two</p>
               </div>
             </div>
+          </Reveal>
+        </div>
+
+        {/* Experience timeline */}
+        <div className="mt-24 md:mt-32">
+          <Reveal>
+            <Kicker>Experience</Kicker>
+            <h2 className="font-display text-3xl md:text-5xl text-offwhite max-w-xl mb-4">
+              Where we&apos;ve been.
+            </h2>
+            <p className="text-offwhite/70 max-w-xl mb-10">
+              A track record built one job at a time. Click a name to open it up.
+            </p>
+          </Reveal>
+          <Reveal delay={100}>
+            <TeamTimeline />
           </Reveal>
         </div>
 
