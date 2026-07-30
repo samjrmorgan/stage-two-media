@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { heroSlides } from "@/lib/hero-slides";
 
-const SLIDE_DURATION_MS = 6000;
+const SLIDE_DURATION_MS = 11000;
 
 export function HeroSlideshow() {
   const [index, setIndex] = useState(0);
@@ -22,7 +22,9 @@ export function HeroSlideshow() {
     return () => clearInterval(id);
   }, []);
 
-  const activeAward = heroSlides[index].award;
+  const awardSlideIndex = heroSlides.findIndex((s) => s.award);
+  const award = awardSlideIndex >= 0 ? heroSlides[awardSlideIndex].award : undefined;
+  const showAward = index === awardSlideIndex;
 
   return (
     <div className="absolute inset-0">
@@ -40,24 +42,26 @@ export function HeroSlideshow() {
         />
       ))}
 
-      <div
-        className={`absolute top-24 right-4 md:top-28 md:right-8 z-10 flex items-end gap-3 transition-opacity duration-[1500ms] ease-in-out ${
-          activeAward ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
-      >
-        {activeAward?.badges.map((badge, i) => (
-          <div
-            key={badge.src}
-            className="relative h-16 w-16 md:h-20 md:w-20 animate-float"
-            style={{
-              filter: "drop-shadow(0 8px 14px rgba(0,0,0,0.5))",
-              animationDelay: `${i * 0.4}s`,
-            }}
-          >
-            <Image src={badge.src} alt={badge.alt} fill sizes="80px" className="object-contain" />
-          </div>
-        ))}
-      </div>
+      {award && (
+        <div
+          className={`absolute top-24 right-4 md:top-28 md:right-8 z-10 flex items-end gap-3 transition-opacity duration-[1500ms] ease-in-out ${
+            showAward ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
+        >
+          {award.badges.map((badge, i) => (
+            <div
+              key={badge.src}
+              className="relative h-16 w-16 md:h-20 md:w-20 animate-float"
+              style={{
+                filter: "drop-shadow(0 8px 14px rgba(0,0,0,0.5))",
+                animationDelay: `${i * 0.4}s`,
+              }}
+            >
+              <Image src={badge.src} alt={badge.alt} fill sizes="80px" className="object-contain" />
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
