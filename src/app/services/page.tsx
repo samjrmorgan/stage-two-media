@@ -15,38 +15,69 @@ export const metadata: Metadata = {
 const offerings = [
   {
     number: "01",
-    title: "Documentary & Advocacy",
-    copy: "Field-produced long-form and campaign films for NGOs, charities and organisations who need the real story told with care. On-location filming, interviews, and full post-production.",
-    image: "/images/services/wrapped-in-crimson-thought.jpg",
-    alt: "Low-key portrait of a woman wrapped in a deep red headscarf, looking into the distance",
+    title: "Humanitarian & NGO Stories",
+    copy: "Stories of people, communities, impact, advocacy and change. We work with organisations who need footage and photography from the field - expeditions, programme visits, advocacy campaigns and fundraising appeals - told through the people living them, not stock-style production.",
+    tags: ["Field documentation", "Advocacy & appeal films", "Photography", "Social-first cutdowns"],
+    idealFor: "NGOs, humanitarian organisations, advocacy groups, charities.",
+    caseStudy: "World Vision",
+    caseStudyHref: "/work/world-vision-ghana",
+    image: "/images/work/documentary-ghana/documentary-ghana-03.jpg",
+    alt: "Silhouette of a woman in a doorway, Ghana",
   },
   {
     number: "02",
-    title: "Corporate & Commercial",
-    copy: "Brand films, internal comms, product photography and technical documentation. Shot to match your brand guidelines, delivered on a schedule that matches your launch.",
-    image: "/images/services/nexus-logistics-corporate.jpg",
-    alt: "A Nexus Logistics branded truck loading a shipping container in a container yard",
+    title: "Documentary & Legacy Films",
+    copy: "Personal, cinematic stories about real people and meaningful lives - founder stories, family legacy films, community heroes, athletes and artists. We're built to pull the best, most honest moments out of people and shape them into something worth preserving.",
+    tags: ["Founder & legacy films", "Long-form documentary", "Interview-led storytelling", "Full video + photo package"],
+    idealFor: "founders, families, athletes, artists, community figures.",
+    caseStudy: "Zero to 100",
+    caseStudyHref: "/work/zero-to-100",
+    image: "/images/work/documentary-zero-to-100/documentary-zero-to-100-11.jpg",
+    alt: "Rider giving a thumbs up mid-race",
   },
   {
     number: "03",
-    title: "Weddings & Events",
-    copy: "Cinematic, unobtrusive coverage for weddings and events - a same-week highlight edit, with a full feature film to follow. Photography available alongside video.",
+    title: "Weddings & Milestone Films",
+    copy: "Emotionally crafted films for once-in-a-lifetime human moments - weddings, engagements, cultural ceremonies and multi-day destination celebrations. We shoot off-the-cuff and reactive, so what you get back feels like the day actually felt.",
+    tags: ["Wedding films", "Destination weddings", "Engagement & milestone films", "Wedding photography"],
+    idealFor: "couples who want a cinematic, emotionally-led film over a formulaic package.",
+    caseStudy: "Ben & Mirjam",
+    caseStudyHref: "/work/ben-and-mirjam",
     image: "/images/work/weddings/weddings-06.jpg",
     alt: "Bride and groom embracing in golden light",
   },
   {
     number: "04",
-    title: "Photography",
-    copy: "Editorial, product and behind-the-scenes stills - shot solo or alongside a video crew, so you get a full stills library from every production day.",
-    image: "/images/services/ferrari-dubai-presence.jpg",
-    alt: "A red Ferrari in motion on a highway near Dubai at golden hour",
+    title: "Campaign & Public Life Stories",
+    copy: "Human-centred content for leaders, movements and campaigns where trust matters. We take these on case-by-case, where the cause or client aligns with the kind of work we want our name attached to.",
+    tags: ["Campaign films", "Public issue content", "Community & leadership profiles"],
+    idealFor: "community leaders, purpose-led public figures and campaigns.",
+    caseStudy: "Topham Guerin",
+    caseStudyHref: "/work/topham-guerin-dominican-republic",
+    image: "/images/work/topham-guerin-dr/topham-guerin-dr-01.jpg",
+    alt: "Aerial view of a coastal city in the Dominican Republic",
   },
   {
     number: "05",
-    title: "Motion Graphics",
-    copy: "Animated maps, data overlays and title graphics that turn a raw brief into something clear and watchable - built to sit inside a finished edit, not bolted on afterwards.",
-    image: "/images/services/nexus-motion-graphics-map.jpg",
-    alt: "An animated map graphic tracking a freight rail route between Nexus Southdown and Ruakura",
+    title: "Passion-led Brand Stories",
+    copy: "Commercial work for brands who want more than a product reel - brand films, technical documentation and full asset libraries built around the people and operations behind the business, not just the pack shot.",
+    tags: ["Brand films", "Technical documentation", "Asset libraries", "Drone & multi-camera coverage"],
+    idealFor: "brands and operators who want their story told with craft, not just coverage.",
+    caseStudy: "Nexus Logistics",
+    caseStudyHref: "/work/nexus-logistics",
+    image: "/images/work/nexus-logistics/nexus-logistics-02.jpg",
+    alt: "A reach-stacker branded with the Nexus Logistics logo lifting a shipping container",
+  },
+  {
+    number: "06",
+    title: "Advocacy",
+    copy: "Considered, well-sourced content for industry bodies and associations who need to be heard clearly and credibly - explainer films, multi-location shoots and campaign content built on real operators, not stock footage.",
+    tags: ["Industry advocacy films", "Multi-location production", "Explainer content"],
+    idealFor: "industry bodies, associations and advocacy groups who need credibility as much as polish.",
+    caseStudy: "Minerals Council of Australia",
+    caseStudyHref: "/work/mca-wallaroos",
+    image: "/images/work/mca-wallaroos/mca-wallaroos-01.jpg",
+    alt: "Three Wallaroos players on the pitch at GIO Stadium, Canberra",
   },
 ];
 
@@ -74,10 +105,10 @@ export default function ServicesPage() {
           </p>
         </Reveal>
 
-        <div className="mt-20 flex flex-col gap-16 md:gap-24">
+        <div className="mt-20 border-t border-white/10">
           {offerings.map((o, i) => (
             <Reveal key={o.title}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center py-16 md:py-24 border-b border-white/10">
                 <div
                   className={`relative aspect-[4/3] overflow-hidden rounded-md ${
                     i % 2 === 1 ? "md:order-2" : ""
@@ -92,11 +123,38 @@ export default function ServicesPage() {
                   />
                 </div>
                 <div>
-                  <span className="font-display text-sm text-steel">{o.number}</span>
-                  <h2 className="font-display text-3xl md:text-4xl text-offwhite mt-3 mb-4">
+                  <span className="font-display text-6xl md:text-7xl text-white/10 leading-none block mb-4">
+                    {o.number}
+                  </span>
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="h-px w-6 bg-steel" aria-hidden />
+                    <span className="text-xs uppercase tracking-[0.15em] text-steel">
+                      Content Pillar
+                    </span>
+                  </div>
+                  <h2 className="font-display text-4xl md:text-5xl text-offwhite mb-4">
                     {o.title}
                   </h2>
                   <p className="text-offwhite/70 leading-relaxed max-w-md">{o.copy}</p>
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {o.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-white/15 px-4 py-1.5 text-xs text-offwhite/80"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="mt-6 text-sm text-steel max-w-md">
+                    Ideal for: {o.idealFor}{" "}
+                    <Link
+                      href={o.caseStudyHref}
+                      className="text-offwhite font-medium hover:text-accent transition-colors cursor-pointer"
+                    >
+                      Case study - {o.caseStudy}.
+                    </Link>
+                  </p>
                 </div>
               </div>
             </Reveal>
