@@ -19,7 +19,15 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getJournalPost(slug);
   if (!post) return {};
-  return { title: post.title, description: post.excerpt };
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      images: [{ url: post.cover.src }],
+    },
+  };
 }
 
 export default async function JournalPostPage({

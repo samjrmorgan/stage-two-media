@@ -6,9 +6,9 @@ import { WorkGrid } from "@/components/WorkGrid";
 import { workProjects, filterCategories } from "@/lib/work";
 
 export const metadata: Metadata = {
-  title: "Work",
+  title: "Video Production & Photography Portfolio",
   description:
-    "Documentary, advocacy, corporate and wedding production from Stage Two - shot across five continents on any budget.",
+    "Video production and photography portfolio from Stage Two, Auckland - documentary, advocacy, corporate and wedding films shot across five continents.",
 };
 
 export default function WorkPage() {

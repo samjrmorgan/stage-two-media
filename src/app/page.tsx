@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/Container";
@@ -7,6 +8,14 @@ import { WorkGridCard } from "@/components/WorkGridCard";
 import { HeroSlideshow } from "@/components/HeroSlideshow";
 import { workProjects } from "@/lib/work";
 import { clientLogos } from "@/lib/clients";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Stage Two | Video Production & Photography Company, Auckland NZ",
+  },
+  description:
+    "Auckland video production and photography studio specialising in documentary, advocacy, corporate and wedding films - shot on location worldwide. Get a quote today.",
+};
 
 const heroTags = [
   "Humanitarian & NGO",

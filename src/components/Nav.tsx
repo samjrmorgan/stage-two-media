@@ -67,12 +67,20 @@ export function Nav() {
           })}
         </nav>
 
-        <Link
-          href="/contact"
-          className="hidden md:inline-flex items-center rounded-lg bg-offwhite text-black px-5 py-2 text-sm font-medium transition-transform hover:scale-[1.03] cursor-pointer"
-        >
-          Start a project
-        </Link>
+        <div className="hidden md:flex items-center gap-3">
+          <Link
+            href="/prints"
+            className="inline-flex items-center rounded-lg border border-white/20 text-offwhite px-5 py-2 text-sm font-medium transition-colors hover:border-offwhite/50 cursor-pointer"
+          >
+            Prints
+          </Link>
+          <Link
+            href="/contact"
+            className="inline-flex items-center rounded-lg bg-offwhite text-black px-5 py-2 text-sm font-medium transition-transform hover:scale-[1.03] cursor-pointer"
+          >
+            Start a project
+          </Link>
+        </div>
 
         <button
           type="button"
@@ -109,8 +117,14 @@ export function Nav() {
               </Link>
             ))}
             <Link
+              href="/prints"
+              className="mt-6 inline-flex items-center justify-center rounded-lg border border-white/20 text-offwhite px-5 py-3 text-sm font-medium"
+            >
+              Prints
+            </Link>
+            <Link
               href="/contact"
-              className="mt-6 inline-flex items-center justify-center rounded-lg bg-offwhite text-black px-5 py-3 text-sm font-medium"
+              className="mt-3 inline-flex items-center justify-center rounded-lg bg-offwhite text-black px-5 py-3 text-sm font-medium"
             >
               Start a project
             </Link>

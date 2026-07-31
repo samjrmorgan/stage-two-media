@@ -5,9 +5,33 @@ import { Reveal } from "@/components/Reveal";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Start a project with Stage Two - video production and photography, any budget.",
+  title: "Contact | Get a Video Production Quote",
+  description:
+    "Start a video production or photography project with Stage Two, Auckland - get a quote for documentary, advocacy, corporate or wedding content.",
 };
+
+const process = [
+  {
+    number: "01",
+    title: "Enquiry",
+    copy: "Tell us about your project, purpose, timeline and budget.",
+  },
+  {
+    number: "02",
+    title: "Discovery call",
+    copy: "We talk through what you want your audience to feel, and what it'll take to get there.",
+  },
+  {
+    number: "03",
+    title: "Proposal & booking",
+    copy: "A clear quote and scope, a 50% deposit, and a date locked in.",
+  },
+  {
+    number: "04",
+    title: "Production & delivery",
+    copy: "We shoot, edit and deliver - with feedback rounds built in along the way.",
+  },
+];
 
 export default function ContactPage() {
   return (
@@ -60,6 +84,32 @@ export default function ContactPage() {
                 </div>
               </dl>
             </Reveal>
+
+            <Reveal delay={150} className="mt-16">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-steel">
+                How a project starts
+              </p>
+              <div className="mt-4 border-t border-white/10">
+                {process.map((s, i) => (
+                  <div
+                    key={s.number}
+                    className={`flex gap-6 py-6 ${
+                      i === process.length - 1 ? "" : "border-b border-white/10"
+                    }`}
+                  >
+                    <span className="font-display text-lg text-steel shrink-0 w-8">
+                      {s.number}
+                    </span>
+                    <div>
+                      <h3 className="text-offwhite font-semibold text-lg mb-1.5">
+                        {s.title}
+                      </h3>
+                      <p className="text-steel text-sm leading-relaxed">{s.copy}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
           </div>
 
           <div className="md:col-span-7">
@@ -69,6 +119,27 @@ export default function ContactPage() {
           </div>
         </div>
       </Container>
+
+      <section className="mt-24 md:mt-32 bg-navy py-20 md:py-28">
+        <Container>
+          <Reveal>
+            <div className="flex items-center gap-3 mb-4">
+              <span className="h-px w-6 bg-steel" aria-hidden />
+              <span className="text-xs uppercase tracking-[0.15em] text-steel">
+                Our Ethos
+              </span>
+            </div>
+            <p className="text-2xl md:text-4xl max-w-3xl leading-snug">
+              <span className="text-offwhite font-semibold">
+                We produce content that makes people feel,
+              </span>{" "}
+              <span className="text-offwhite/50">
+                when people feel, they take action.
+              </span>
+            </p>
+          </Reveal>
+        </Container>
+      </section>
     </div>
   );
 }

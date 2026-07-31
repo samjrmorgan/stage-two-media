@@ -7,9 +7,9 @@ import { Reveal } from "@/components/Reveal";
 import { collaborations } from "@/lib/collaborations";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Video Production & Photography Services",
   description:
-    "Documentary, advocacy, corporate, wedding and photography production from Stage Two - full pipeline, any budget.",
+    "Video production and photography services from Stage Two, Auckland - documentary, advocacy, corporate, wedding and brand film production, full pipeline in-house.",
 };
 
 const offerings = [
@@ -132,7 +132,7 @@ export default function ServicesPage() {
           {offerings.map((o, i) => (
             <Reveal key={o.title}>
               <div
-                className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center py-16 md:py-24 ${
+                className={`group grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center py-16 md:py-24 ${
                   i === offerings.length - 1 ? "" : "border-b border-white/10"
                 }`}
               >
@@ -159,7 +159,7 @@ export default function ServicesPage() {
                       Content Pillar
                     </span>
                   </div>
-                  <h2 className="font-display text-4xl md:text-5xl text-offwhite mb-4 transition-colors duration-300 hover:text-accent">
+                  <h2 className="font-display text-4xl md:text-5xl text-offwhite mb-4 transition-colors duration-300 group-hover:text-accent">
                     {o.title}
                   </h2>
                   <p className="text-offwhite/70 leading-relaxed max-w-md">{o.copy}</p>

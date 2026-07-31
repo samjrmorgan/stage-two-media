@@ -7,8 +7,9 @@ import { Reveal } from "@/components/Reveal";
 import { journalPosts } from "@/lib/journal";
 
 export const metadata: Metadata = {
-  title: "Journal",
-  description: "Notes from the field, the edit suite, and everywhere between - from Stage Two.",
+  title: "Video Production Journal & Insights",
+  description:
+    "Notes on video production, photography and documentary filmmaking from the Stage Two team - gear, process and stories from the field.",
 };
 
 export default function JournalPage() {

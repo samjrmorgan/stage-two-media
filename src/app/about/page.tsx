@@ -6,12 +6,17 @@ import { Kicker } from "@/components/Kicker";
 import { Reveal } from "@/components/Reveal";
 import { WorldMap } from "@/components/WorldMap";
 import { AnimatedNumber } from "@/components/AnimatedNumber";
-import { TeamTimeline } from "@/components/TeamTimeline";
+import {
+  googleReviews,
+  googleReviewsAverage,
+  googleReviewsCount,
+  googleReviewsUrl,
+} from "@/lib/reviews";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Our Auckland Video Production Studio",
   description:
-    "Stage Two is a boutique production house founded to make high-end video and photography accessible to any business, on any budget.",
+    "Stage Two is an Auckland video production and photography studio making high-end content production accessible to any business, on any budget.",
 };
 
 const stats = [
@@ -32,6 +37,25 @@ const values = [
   {
     title: "Passionate",
     copy: "Zero to 100 exists because we'll make things nobody asked for, just to prove they're worth making.",
+  },
+];
+
+const team = [
+  {
+    initials: "SM",
+    name: "Sam Morgan",
+    title: "Director & Creative Lead",
+    bio: "Sam leads creative direction, shooting, editing, colour and delivery on every Stage Two project - working off-the-cuff, reactive to what's actually happening in front of the camera, rather than a rigid storyboard.",
+    image: "/images/team/sam-morgan-01.jpg",
+    imageAlt: "Sam Morgan laughing while filming in the field, camera in hand",
+  },
+  {
+    initials: "EH",
+    name: "Ellie Harwood",
+    title: "Producer & Client Experience",
+    bio: "Ellie leads client relationships, coordination and the business behind the work, bringing a psychology-informed approach to making people comfortable enough on camera to be genuinely themselves.",
+    image: "/images/team/ellie-harwood-01.jpg",
+    imageAlt: "Ellie Harwood holding a camera",
   },
 ];
 
@@ -70,7 +94,7 @@ export default function AboutPage() {
               Founder and director Sam Morgan has spent a decade in video
               production and photography, teaching himself every pillar of
               the craft along the way. Today the studio is run by two - Sam
-              and Ellie Harwood.
+              and Ellie.
             </p>
             <p className="text-offwhite/70 leading-relaxed mb-4">
               That means Stage Two can run lean from pre-production through
@@ -139,6 +163,104 @@ export default function AboutPage() {
           </div>
         </div>
 
+        {/* Meet the team */}
+        <div className="mt-24 md:mt-32">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-14">
+            <Reveal>
+              <Kicker>The Team</Kicker>
+              <h2 className="font-display text-4xl md:text-6xl text-offwhite">
+                Meet Stage Two.
+              </h2>
+            </Reveal>
+            <Reveal delay={100}>
+              <p className="text-offwhite/70 leading-relaxed md:text-lg">
+                A two-person crew with most of the skills a bigger studio would
+                need - which means fewer handoffs, and a lot more care.
+              </p>
+            </Reveal>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {team.map((p, i) => (
+              <Reveal key={p.name} delay={i * 100}>
+                <div className="group rounded-md border border-white/10 bg-black overflow-hidden">
+                  <div className="relative aspect-[4/5] bg-gradient-to-br from-black via-navy to-warmnavy overflow-hidden">
+                    {p.image ? (
+                      <Image
+                        src={p.image}
+                        alt={p.imageAlt}
+                        fill
+                        sizes="(min-width: 768px) 50vw, 100vw"
+                        className="object-cover grayscale scale-100 transition-all duration-500 ease-out group-hover:grayscale-0 group-hover:scale-105"
+                      />
+                    ) : (
+                      <span className="absolute inset-0 flex items-center justify-center font-display text-8xl text-white/10">
+                        {p.initials}
+                      </span>
+                    )}
+                  </div>
+                  <div className="p-8">
+                    <h3 className="font-display text-2xl text-offwhite">{p.name}</h3>
+                    <p className="text-xs uppercase tracking-[0.15em] text-steel mt-1 mb-4">
+                      {p.title}
+                    </p>
+                    <p className="text-sm text-offwhite/70 leading-relaxed">{p.bio}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+
+        {/* Google reviews */}
+        <div className="mt-24 md:mt-32">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-14">
+            <Reveal>
+              <Kicker>Reviews</Kicker>
+              <h2 className="font-display text-4xl md:text-6xl text-offwhite">
+                What clients say.
+              </h2>
+            </Reveal>
+            <Reveal delay={100}>
+              <p className="text-offwhite/70 leading-relaxed md:text-lg">
+                {googleReviewsAverage.toFixed(1)} average across{" "}
+                {googleReviewsCount} Google reviews.{" "}
+                <a
+                  href={googleReviewsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-offwhite underline underline-offset-4 hover:text-accent transition-colors cursor-pointer"
+                >
+                  Read them on Google.
+                </a>
+              </p>
+            </Reveal>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {googleReviews.map((r, i) => (
+              <Reveal
+                key={r.name}
+                delay={i * 70}
+                className="rounded-md border border-white/10 bg-black p-8 flex flex-col"
+              >
+                <div className="flex gap-1 text-accent mb-4" aria-hidden>
+                  {Array.from({ length: 5 }).map((_, s) => (
+                    <svg key={s} width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.9-6.2 3.9 1.6-7L2 9.2l7.1-.6L12 2z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-sm text-offwhite/80 leading-relaxed flex-1">
+                  &ldquo;{r.quote}&rdquo;
+                </p>
+                <div className="mt-6">
+                  <p className="text-offwhite text-sm font-medium">{r.name}</p>
+                  <p className="text-steel text-xs mt-0.5">{r.timeAgo}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+
         {/* Quote / signature */}
         <div className="mt-24 md:mt-32">
           <Reveal>
@@ -159,22 +281,6 @@ export default function AboutPage() {
                 <p className="text-steel text-sm">Director, Stage Two</p>
               </div>
             </div>
-          </Reveal>
-        </div>
-
-        {/* Experience timeline */}
-        <div className="mt-24 md:mt-32">
-          <Reveal>
-            <Kicker>Experience</Kicker>
-            <h2 className="font-display text-3xl md:text-5xl text-offwhite max-w-xl mb-4">
-              Where we&apos;ve been.
-            </h2>
-            <p className="text-offwhite/70 max-w-xl mb-10">
-              A track record built one job at a time. Click a name to open it up.
-            </p>
-          </Reveal>
-          <Reveal delay={100}>
-            <TeamTimeline />
           </Reveal>
         </div>
 
