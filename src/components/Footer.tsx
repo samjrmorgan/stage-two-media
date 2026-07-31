@@ -22,10 +22,10 @@ const columns = [
   {
     heading: "Follow",
     links: [
-      { href: "https://instagram.com/stagetwo.media", label: "Instagram" },
-      { href: "https://www.facebook.com/stagetwomedia", label: "Facebook" },
-      { href: "https://www.linkedin.com/company/stagetwomedia", label: "LinkedIn" },
-      { href: "https://vimeo.com/stagetwomediahouse", label: "Vimeo" },
+      { href: "https://instagram.com/stagetwo.media", label: "Instagram", external: true },
+      { href: "https://www.facebook.com/stagetwomedia", label: "Facebook", external: true },
+      { href: "https://www.linkedin.com/company/stagetwomedia", label: "LinkedIn", external: true },
+      { href: "https://vimeo.com/stagetwomediahouse", label: "Vimeo", external: true },
     ],
   },
 ];
@@ -54,6 +54,8 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
+                      target={"external" in link && link.external ? "_blank" : undefined}
+                      rel={"external" in link && link.external ? "noopener noreferrer" : undefined}
                       className="text-sm text-offwhite/80 hover:text-offwhite transition-colors cursor-pointer"
                     >
                       {link.label}

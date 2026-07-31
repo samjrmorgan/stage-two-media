@@ -182,7 +182,7 @@ export default function Home() {
               <Reveal
                 key={p.title}
                 delay={i * 70}
-                className="rounded-md border border-white/10 bg-black p-8 md:p-10"
+                className="rounded-md border border-white/10 bg-black p-8 md:p-10 transition-colors duration-300 hover:bg-navy"
               >
                 <span className="font-display text-sm text-steel">
                   0{i + 1}

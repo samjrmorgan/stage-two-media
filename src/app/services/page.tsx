@@ -21,8 +21,8 @@ const offerings = [
     idealFor: "NGOs, humanitarian organisations, advocacy groups, charities.",
     caseStudy: "World Vision",
     caseStudyHref: "/work/world-vision-ghana",
-    image: "/images/work/documentary-ghana/documentary-ghana-03.jpg",
-    alt: "Silhouette of a woman in a doorway, Ghana",
+    image: "/images/work/documentary-ghana/documentary-ghana-13.jpg",
+    alt: "Four young girls in colourful dresses standing together in Ghana",
   },
   {
     number: "02",
@@ -32,8 +32,8 @@ const offerings = [
     idealFor: "founders, families, athletes, artists, community figures.",
     caseStudy: "Zero to 100",
     caseStudyHref: "/work/zero-to-100",
-    image: "/images/work/documentary-zero-to-100/documentary-zero-to-100-11.jpg",
-    alt: "Rider giving a thumbs up mid-race",
+    image: "/images/work/dillen/dillen-01.jpg",
+    alt: "A man in traditional white Emirati dress shielding his eyes while walking across desert dunes",
   },
   {
     number: "03",
@@ -43,8 +43,8 @@ const offerings = [
     idealFor: "couples who want a cinematic, emotionally-led film over a formulaic package.",
     caseStudy: "Ben & Mirjam",
     caseStudyHref: "/work/ben-and-mirjam",
-    image: "/images/work/weddings/weddings-06.jpg",
-    alt: "Bride and groom embracing in golden light",
+    image: "/images/work/weddings/weddings-13.jpg",
+    alt: "A bride walking down the aisle arm-in-arm with her father",
   },
   {
     number: "04",
@@ -54,8 +54,8 @@ const offerings = [
     idealFor: "community leaders, purpose-led public figures and campaigns.",
     caseStudy: "Topham Guerin",
     caseStudyHref: "/work/topham-guerin-dominican-republic",
-    image: "/images/work/topham-guerin-dr/topham-guerin-dr-01.jpg",
-    alt: "Aerial view of a coastal city in the Dominican Republic",
+    image: "/images/work/topham-guerin-dr/topham-guerin-dr-09.jpg",
+    alt: "A couple in period costume standing in a colonial-era street in the Dominican Republic",
   },
   {
     number: "05",
@@ -76,8 +76,8 @@ const offerings = [
     idealFor: "industry bodies, associations and advocacy groups who need credibility as much as polish.",
     caseStudy: "Minerals Council of Australia",
     caseStudyHref: "/work/mca-wallaroos",
-    image: "/images/work/mca-wallaroos/mca-wallaroos-01.jpg",
-    alt: "Three Wallaroos players on the pitch at GIO Stadium, Canberra",
+    image: "/images/work/mca-wallaroos/mca-wallaroos-08.jpg",
+    alt: "A research team member looking out over the Great Barrier Reef from a boat",
   },
 ];
 
@@ -105,10 +105,37 @@ export default function ServicesPage() {
           </p>
         </Reveal>
 
-        <div className="mt-20 border-t border-white/10">
+        {/* Process */}
+        <div className="mt-20 border-t border-white/10 pt-16 md:pt-24">
+          <Reveal>
+            <Kicker>How It Works</Kicker>
+            <h2 className="font-display text-4xl md:text-6xl text-offwhite max-w-2xl mb-14">
+              From brief to delivery.
+            </h2>
+          </Reveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 rounded-md overflow-hidden">
+            {process.map((p, i) => (
+              <Reveal
+                key={p.step}
+                delay={i * 80}
+                className="bg-black p-8 transition-colors duration-300 hover:bg-navy"
+              >
+                <span className="font-display text-sm text-steel">0{i + 1}</span>
+                <h3 className="font-display text-xl text-offwhite mt-4 mb-3">{p.step}</h3>
+                <p className="text-sm text-offwhite/70">{p.copy}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-24 md:mt-32 border-t border-white/10">
           {offerings.map((o, i) => (
             <Reveal key={o.title}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center py-16 md:py-24 border-b border-white/10">
+              <div
+                className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center py-16 md:py-24 ${
+                  i === offerings.length - 1 ? "" : "border-b border-white/10"
+                }`}
+              >
                 <div
                   className={`relative aspect-[4/3] overflow-hidden rounded-md ${
                     i % 2 === 1 ? "md:order-2" : ""
@@ -132,7 +159,7 @@ export default function ServicesPage() {
                       Content Pillar
                     </span>
                   </div>
-                  <h2 className="font-display text-4xl md:text-5xl text-offwhite mb-4">
+                  <h2 className="font-display text-4xl md:text-5xl text-offwhite mb-4 transition-colors duration-300 hover:text-accent">
                     {o.title}
                   </h2>
                   <p className="text-offwhite/70 leading-relaxed max-w-md">{o.copy}</p>
@@ -161,27 +188,6 @@ export default function ServicesPage() {
           ))}
         </div>
       </Container>
-
-      {/* Process */}
-      <section className="mt-24 md:mt-32 border-t border-white/10 pt-24 md:pt-32">
-        <Container>
-          <Reveal>
-            <Kicker>How It Works</Kicker>
-            <h2 className="font-display text-4xl md:text-6xl text-offwhite max-w-2xl mb-14">
-              From brief to delivery.
-            </h2>
-          </Reveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 rounded-md overflow-hidden">
-            {process.map((p, i) => (
-              <Reveal key={p.step} delay={i * 80} className="bg-black p-8">
-                <span className="font-display text-sm text-steel">0{i + 1}</span>
-                <h3 className="font-display text-xl text-offwhite mt-4 mb-3">{p.step}</h3>
-                <p className="text-sm text-offwhite/70">{p.copy}</p>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </section>
 
       {/* Partnerships & Collaborations */}
       <section className="mt-24 md:mt-32 border-t border-white/10 pt-24 md:pt-32">

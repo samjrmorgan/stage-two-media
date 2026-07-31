@@ -282,7 +282,7 @@ export const workProjects: WorkProject[] = [
     cardCopy:
       "A long-form, in-studio interview with freestyle rap phenomenon Harry Mack, filmed on location in Los Angeles.",
     description: [
-      "Stage Two travelled to Los Angeles to film a long-form interview between host Liam McEwan and Harry Mack, the freestyle rapper known for viral improvised performances.",
+      "Stage Two travelled to Los Angeles to film a long-form interview between host Liam McEwan, an entertainment journalist with the Associated Press, and Harry Mack, the freestyle rapper known for viral improvised performances.",
       "Shot multi-camera in a dressed studio set, the conversation was cut into a full-length interview alongside a shorter 4:5 teaser for social, with b-roll drawn from Harry Mack's own performance history woven through the edit.",
     ],
     services: ["Interview Filming", "Multi-Camera Production", "Editing", "Social Cutdowns"],
@@ -495,8 +495,8 @@ export const workProjects: WorkProject[] = [
     ],
     services: ["Brand Film", "Photography", "Social Cutdowns"],
     cover: {
-      src: "/images/work/mca-wallaroos/mca-wallaroos-01.jpg",
-      alt: "Three Wallaroos players on the pitch at GIO Stadium, Canberra, in front of the 'A Career in Australian Mining' big screen",
+      src: "/images/work/mca-wallaroos/mca-wallaroos-09.jpg",
+      alt: "Three Wallaroos players standing arms crossed on the pitch at GIO Stadium, Canberra, in front of the 'A Career in Australian Mining' big screen",
     },
     gallery: [
       { src: "/images/work/mca-wallaroos/mca-wallaroos-01.jpg", alt: "Three Wallaroos players on the pitch at GIO Stadium, Canberra" },
