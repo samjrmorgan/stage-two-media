@@ -145,6 +145,7 @@ export const workProjects: WorkProject[] = [
     category: "Documentary / Advocacy",
     filter: "Humanitarian & NGO",
     kind: "film",
+    vimeoId: "1207932937",
     year: "2023–2026",
     location: "Senegal",
     summary:
@@ -177,6 +178,7 @@ export const workProjects: WorkProject[] = [
     category: "Documentary / Advocacy",
     filter: "Humanitarian & NGO",
     kind: "film",
+    vimeoId: "1207929991",
     year: "2023–2026",
     location: "Cambodia",
     summary:
@@ -209,6 +211,7 @@ export const workProjects: WorkProject[] = [
     category: "Documentary / Advocacy",
     filter: "Humanitarian & NGO",
     kind: "film",
+    vimeoId: "952183543",
     year: "2024",
     location: "Vietnam",
     summary:
