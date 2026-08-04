@@ -20,6 +20,8 @@ export type WorkProject = {
   kind: "film" | "photo";
   /** Vimeo video ID or full vimeo.com URL - leave undefined if there's no film to embed yet. */
   vimeoId?: string;
+  /** ISO 8601 duration (e.g. "PT2M30S") for the embedded film - leave undefined if unknown. */
+  videoDuration?: string;
   year: string;
   location: string;
   summary: string;

@@ -71,8 +71,9 @@ export default async function WorkCaseStudy({
         "@type": "VideoObject",
         name: project.title,
         description: project.summary,
-        thumbnailUrl: `${BASE_URL}${project.cover.src}`,
+        thumbnailUrl: [`${BASE_URL}${project.cover.src}`],
         uploadDate: `${project.year}-01-01`,
+        ...(project.videoDuration ? { duration: project.videoDuration } : {}),
         embedUrl: `https://player.vimeo.com/video/${extractVimeoId(project.vimeoId)}`,
         publisher: {
           "@type": "Organization",

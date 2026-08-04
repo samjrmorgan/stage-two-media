@@ -68,10 +68,10 @@ export default async function JournalPostPage({
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
-    image: `${BASE_URL}${post.cover.src}`,
+    image: [`${BASE_URL}${post.cover.src}`],
     datePublished: post.publishedAt,
     dateModified: post.publishedAt,
-    author: { "@type": "Organization", name: "Stage Two Media" },
+    author: { "@type": "Person", name: "Sam Morgan" },
     publisher: {
       "@type": "Organization",
       name: "Stage Two Media",
