@@ -35,11 +35,13 @@ const pillars = [
     title: "Documentary & Legacy Films",
     copy: "Personal, cinematic stories about real people and meaningful lives worth preserving.",
     example: "Zero to 100",
+    href: "/services/documentary",
   },
   {
     title: "Weddings & Milestone Films",
     copy: "Emotionally crafted films for once-in-a-lifetime moments, shot off-the-cuff and full of feeling.",
     example: "Ben & Mirjam",
+    href: "/services/wedding-videography",
   },
   {
     title: "Campaign & Public Life Stories",
@@ -49,6 +51,7 @@ const pillars = [
     title: "Passion-led Brand Stories",
     copy: "Commercial work - but only when there's a real human story or purpose behind it.",
     example: "Nexus Logistics",
+    href: "/services/corporate-video",
   },
   {
     title: "Advocacy",
@@ -187,26 +190,40 @@ export default function Home() {
             </div>
           </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {pillars.map((p, i) => (
-              <Reveal
-                key={p.title}
-                delay={i * 70}
-                className="rounded-md border border-white/10 bg-black p-8 md:p-10 transition-colors duration-300 hover:bg-navy"
-              >
-                <span className="font-display text-sm text-steel">
-                  0{i + 1}
-                </span>
-                <h3 className="font-display text-xl text-offwhite mt-4 mb-3">
-                  {p.title}
-                </h3>
-                <p className="text-sm text-offwhite/70 max-w-sm">{p.copy}</p>
-                {p.example && (
-                  <p className="mt-4 text-xs uppercase tracking-[0.1em] text-steel">
-                    Ex. {p.example}
-                  </p>
-                )}
-              </Reveal>
-            ))}
+            {pillars.map((p, i) => {
+              const cardContent = (
+                <>
+                  <span className="font-display text-sm text-steel">
+                    0{i + 1}
+                  </span>
+                  <h3 className="font-display text-xl text-offwhite mt-4 mb-3">
+                    {p.title}
+                  </h3>
+                  <p className="text-sm text-offwhite/70 max-w-sm">{p.copy}</p>
+                  {p.example && (
+                    <p className="mt-4 text-xs uppercase tracking-[0.1em] text-steel">
+                      Ex. {p.example}
+                    </p>
+                  )}
+                </>
+              );
+              return (
+                <Reveal key={p.title} delay={i * 70}>
+                  {p.href ? (
+                    <Link
+                      href={p.href}
+                      className="block rounded-md border border-white/10 bg-black p-8 md:p-10 transition-colors duration-300 hover:bg-navy cursor-pointer"
+                    >
+                      {cardContent}
+                    </Link>
+                  ) : (
+                    <div className="rounded-md border border-white/10 bg-black p-8 md:p-10 transition-colors duration-300 hover:bg-navy">
+                      {cardContent}
+                    </div>
+                  )}
+                </Reveal>
+              );
+            })}
           </div>
         </Container>
       </section>

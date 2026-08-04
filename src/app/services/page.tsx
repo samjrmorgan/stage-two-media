@@ -5,6 +5,7 @@ import { Container } from "@/components/Container";
 import { Kicker } from "@/components/Kicker";
 import { Reveal } from "@/components/Reveal";
 import { collaborations } from "@/lib/collaborations";
+import { servicePages } from "@/lib/service-pages";
 
 export const metadata: Metadata = {
   title: "Video Production & Photography Services",
@@ -238,6 +239,35 @@ export default function ServicesPage() {
                     </div>
                   </div>
                 </a>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Explore by service */}
+      <section className="mt-24 md:mt-32 border-t border-white/10 pt-24 md:pt-32">
+        <Container>
+          <Reveal>
+            <Kicker>Explore by Service</Kicker>
+            <h2 className="font-display text-4xl md:text-6xl text-offwhite max-w-2xl mb-14">
+              Looking for something specific?
+            </h2>
+          </Reveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {servicePages.map((p, i) => (
+              <Reveal key={p.slug} delay={i * 80}>
+                <Link
+                  href={`/services/${p.slug}`}
+                  className="group block rounded-md border border-white/10 bg-black p-8 transition-colors hover:bg-navy cursor-pointer"
+                >
+                  <h3 className="font-display text-2xl text-offwhite mb-3 transition-colors group-hover:text-accent">
+                    {p.h1}
+                  </h3>
+                  <p className="text-sm text-offwhite/70 leading-relaxed max-w-md">
+                    {p.metaDescription}
+                  </p>
+                </Link>
               </Reveal>
             ))}
           </div>

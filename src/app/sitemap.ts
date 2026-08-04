@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { workProjects } from "@/lib/work";
 import { journalPosts } from "@/lib/journal";
+import { servicePages } from "@/lib/service-pages";
 
 const BASE_URL = "https://stagetwo.media";
 
@@ -26,5 +27,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...workRoutes, ...journalRoutes];
+  const servicePageRoutes: MetadataRoute.Sitemap = servicePages.map((page) => ({
+    url: `${BASE_URL}/services/${page.slug}`,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...workRoutes, ...journalRoutes, ...servicePageRoutes];
 }
