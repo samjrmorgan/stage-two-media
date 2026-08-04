@@ -5,11 +5,14 @@ export type JournalPost = {
   excerpt: string;
   body: string[];
   cover: { src: string; alt: string };
+  /** ISO date (YYYY-MM-DD). All posts currently share the site's launch date, since none have been publicly published before now. */
+  publishedAt: string;
 };
 
 export const journalPosts: JournalPost[] = [
   {
     slug: "five-countries-one-camera-bag",
+    publishedAt: "2026-08-04",
     title: "Five countries, one camera bag",
     tag: "On Location",
     excerpt:
@@ -26,6 +29,7 @@ export const journalPosts: JournalPost[] = [
   },
   {
     slug: "adjusting-to-extreme-conditions",
+    publishedAt: "2026-08-04",
     title: "Adjusting to extreme conditions",
     tag: "On Location",
     excerpt:
@@ -42,6 +46,7 @@ export const journalPosts: JournalPost[] = [
   },
   {
     slug: "why-we-made-zero-to-100",
+    publishedAt: "2026-08-04",
     title: "Why we made Zero to 100",
     tag: "Behind The Scenes",
     excerpt:
@@ -58,6 +63,7 @@ export const journalPosts: JournalPost[] = [
   },
   {
     slug: "shooting-weddings-like-documentaries",
+    publishedAt: "2026-08-04",
     title: "Shooting weddings like documentaries",
     tag: "Craft",
     excerpt:
@@ -73,6 +79,7 @@ export const journalPosts: JournalPost[] = [
   },
   {
     slug: "what-to-ask-before-hiring-a-video-production-company",
+    publishedAt: "2026-08-04",
     title: "What to ask before hiring a video production company",
     tag: "Craft",
     excerpt:
@@ -87,6 +94,7 @@ export const journalPosts: JournalPost[] = [
   },
   {
     slug: "the-gear-we-pack-for-a-solo-documentary-shoot",
+    publishedAt: "2026-08-04",
     title: "The gear we actually pack for a solo documentary shoot",
     tag: "Craft",
     excerpt:
@@ -101,6 +109,7 @@ export const journalPosts: JournalPost[] = [
   },
   {
     slug: "why-we-shoot-sony",
+    publishedAt: "2026-08-04",
     title: "Why we shoot Sony",
     tag: "Craft",
     excerpt:
@@ -117,6 +126,7 @@ export const journalPosts: JournalPost[] = [
   },
   {
     slug: "running-a-two-person-production-studio",
+    publishedAt: "2026-08-04",
     title: "Running a two-person production studio: the honest version",
     tag: "Studio",
     excerpt:
@@ -131,6 +141,7 @@ export const journalPosts: JournalPost[] = [
   },
   {
     slug: "why-we-shoot-stills-and-video-on-the-same-day",
+    publishedAt: "2026-08-04",
     title: "Why we shoot stills and video on the same day",
     tag: "Craft",
     excerpt:
@@ -145,6 +156,7 @@ export const journalPosts: JournalPost[] = [
   },
   {
     slug: "how-much-does-a-wedding-film-cost-in-nz",
+    publishedAt: "2026-08-04",
     title: "How much does a wedding film actually cost in NZ?",
     tag: "Craft",
     excerpt:
@@ -159,6 +171,7 @@ export const journalPosts: JournalPost[] = [
   },
   {
     slug: "how-much-does-a-corporate-video-cost-in-nz",
+    publishedAt: "2026-08-04",
     title: "How much does a corporate video cost in New Zealand?",
     tag: "Craft",
     excerpt:
@@ -173,6 +186,7 @@ export const journalPosts: JournalPost[] = [
   },
   {
     slug: "one-operator-vs-a-full-crew",
+    publishedAt: "2026-08-04",
     title: "One operator vs. a full crew: when each makes sense",
     tag: "Studio",
     excerpt:
@@ -187,6 +201,7 @@ export const journalPosts: JournalPost[] = [
   },
   {
     slug: "same-week-wedding-edits-how-we-do-it",
+    publishedAt: "2026-08-04",
     title: "Same-week wedding edits: how we do it and why",
     tag: "Craft",
     excerpt:
@@ -201,6 +216,7 @@ export const journalPosts: JournalPost[] = [
   },
   {
     slug: "1200-exports-later",
+    publishedAt: "2026-08-04",
     title: "1,200 exports later: what we've learned about finishing a film properly",
     tag: "Studio",
     excerpt:
@@ -215,6 +231,7 @@ export const journalPosts: JournalPost[] = [
   },
   {
     slug: "one-red-sock-each",
+    publishedAt: "2026-08-04",
     title: "One red sock each: how we won the Sir Peter Blake Foundation",
     tag: "Studio",
     excerpt:
@@ -232,6 +249,7 @@ export const journalPosts: JournalPost[] = [
   },
   {
     slug: "why-stage-two-turns-down-some-briefs",
+    publishedAt: "2026-08-04",
     title: "Why Stage Two turns down some briefs",
     tag: "Studio",
     excerpt:
@@ -246,6 +264,7 @@ export const journalPosts: JournalPost[] = [
   },
   {
     slug: "where-ai-fits-in-our-workflow",
+    publishedAt: "2026-08-04",
     title: "Where AI fits in our workflow (and where it doesn't)",
     tag: "Studio",
     excerpt:

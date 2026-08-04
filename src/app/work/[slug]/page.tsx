@@ -6,9 +6,11 @@ import { Container } from "@/components/Container";
 import { Kicker } from "@/components/Kicker";
 import { Reveal } from "@/components/Reveal";
 import { WorkGridCard } from "@/components/WorkGridCard";
-import { VimeoEmbed } from "@/components/VimeoEmbed";
+import { VimeoEmbed, extractVimeoId } from "@/components/VimeoEmbed";
 import { CaseStudyFloatNav } from "@/components/CaseStudyFloatNav";
 import { getWorkProject, workProjects } from "@/lib/work";
+
+const BASE_URL = "https://stagetwo.media";
 
 export function generateStaticParams() {
   return workProjects.map((p) => ({ slug: p.slug }));
@@ -48,8 +50,53 @@ export default async function WorkCaseStudy({
   const prevProject = workProjects[(currentIndex - 1 + workProjects.length) % workProjects.length];
   const nextProject = workProjects[(currentIndex + 1) % workProjects.length];
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+      { "@type": "ListItem", position: 2, name: "Work", item: `${BASE_URL}/work` },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: project.title,
+        item: `${BASE_URL}/work/${project.slug}`,
+      },
+    ],
+  };
+
+  const videoJsonLd = project.vimeoId
+    ? {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        name: project.title,
+        description: project.summary,
+        thumbnailUrl: `${BASE_URL}${project.cover.src}`,
+        uploadDate: `${project.year}-01-01`,
+        embedUrl: `https://player.vimeo.com/video/${extractVimeoId(project.vimeoId)}`,
+        publisher: {
+          "@type": "Organization",
+          name: "Stage Two Media",
+          logo: {
+            "@type": "ImageObject",
+            url: `${BASE_URL}/brand/logo/primary-offwhite.svg`,
+          },
+        },
+      }
+    : null;
+
   return (
     <div className="bg-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {videoJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoJsonLd) }}
+        />
+      )}
       <CaseStudyFloatNav prevHref={`/work/${prevProject.slug}`} nextHref={`/work/${nextProject.slug}`} />
 
       {/* Hero */}

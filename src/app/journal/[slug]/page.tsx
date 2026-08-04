@@ -7,6 +7,15 @@ import { Kicker } from "@/components/Kicker";
 import { Reveal } from "@/components/Reveal";
 import { getJournalPost, journalPosts } from "@/lib/journal";
 
+const BASE_URL = "https://stagetwo.media";
+
+// These posts are each framed as a single question in the title, answered directly in the
+// body - genuinely visible Q&A content, so an FAQPage entry is added for just these slugs.
+const FAQ_POST_SLUGS = [
+  "how-much-does-a-wedding-film-cost-in-nz",
+  "how-much-does-a-corporate-video-cost-in-nz",
+];
+
 export function generateStaticParams() {
   return journalPosts.map((p) => ({ slug: p.slug }));
 }
@@ -39,8 +48,77 @@ export default async function JournalPostPage({
   const post = getJournalPost(slug);
   if (!post) notFound();
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+      { "@type": "ListItem", position: 2, name: "Journal", item: `${BASE_URL}/journal` },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: `${BASE_URL}/journal/${post.slug}`,
+      },
+    ],
+  };
+
+  const blogPostingJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    image: `${BASE_URL}${post.cover.src}`,
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    author: { "@type": "Organization", name: "Stage Two Media" },
+    publisher: {
+      "@type": "Organization",
+      name: "Stage Two Media",
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/brand/logo/primary-offwhite.svg`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${BASE_URL}/journal/${post.slug}`,
+    },
+  };
+
+  const faqJsonLd = FAQ_POST_SLUGS.includes(post.slug)
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: post.title,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: post.body.join(" "),
+            },
+          },
+        ],
+      }
+    : null;
+
   return (
     <div className="bg-black pt-40 pb-24 md:pb-32">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }}
+      />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <Container className="max-w-3xl">
         <Reveal>
           <Kicker>{post.tag}</Kicker>

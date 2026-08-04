@@ -34,30 +34,52 @@ export const metadata: Metadata = {
   },
 };
 
-const LOCAL_BUSINESS_JSON_LD = {
+const SITE_JSON_LD = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Stage Two",
-  alternateName: "Stage Two Media",
-  url: "https://stagetwo.media",
-  logo: "https://stagetwo.media/brand/logo/primary-offwhite.svg",
-  image: `https://stagetwo.media${OG_IMAGE}`,
-  description:
-    "Auckland-based video production and photography studio creating documentary, advocacy, wedding and brand content, shot on location worldwide.",
-  email: "sam@stagetwo.media",
-  telephone: "+64212262822",
-  priceRange: "$$",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Auckland",
-    addressCountry: "NZ",
-  },
-  areaServed: "Worldwide",
-  sameAs: [
-    "https://instagram.com/stagetwo.media",
-    "https://www.facebook.com/stagetwomedia",
-    "https://www.linkedin.com/company/stagetwomedia",
-    "https://vimeo.com/stagetwomediahouse",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://stagetwo.media/#business",
+      name: "Stage Two Media",
+      url: "https://stagetwo.media",
+      logo: "https://stagetwo.media/brand/logo/primary-offwhite.svg",
+      image: "https://stagetwo.media/images/hero/primary-colours-senegal.jpg",
+      description:
+        "Award-winning Auckland video and photography production studio specialising in documentary, advocacy, corporate, brand and wedding films - shot on location worldwide.",
+      telephone: "+64 21 226 2822",
+      email: "sam@stagetwo.media",
+      foundingDate: "2024-02",
+      founder: [
+        { "@type": "Person", name: "Sam Morgan" },
+        { "@type": "Person", name: "Ellie Harwood" },
+      ],
+      areaServed: [
+        { "@type": "City", name: "Auckland" },
+        { "@type": "Country", name: "New Zealand" },
+      ],
+      knowsAbout: [
+        "Video production",
+        "Photography",
+        "Documentary film",
+        "Brand films",
+        "Wedding films",
+        "Aerial cinematography",
+        "Event coverage",
+      ],
+      sameAs: [
+        "https://instagram.com/stagetwo.media",
+        "https://www.facebook.com/stagetwomedia",
+        "https://www.linkedin.com/company/stagetwomedia",
+        "https://vimeo.com/stagetwomediahouse",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://stagetwo.media/#website",
+      url: "https://stagetwo.media",
+      name: "Stage Two Media",
+      publisher: { "@id": "https://stagetwo.media/#business" },
+    },
   ],
 };
 
@@ -75,7 +97,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_JSON_LD) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(SITE_JSON_LD) }}
         />
         <Nav />
         <main className="flex-1">{children}</main>

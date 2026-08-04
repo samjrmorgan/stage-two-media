@@ -1,4 +1,4 @@
-function extractVimeoId(idOrUrl: string): string {
+export function extractVimeoId(idOrUrl: string): string {
   const match = idOrUrl.match(/(\d+)/);
   return match ? match[1] : idOrUrl;
 }
