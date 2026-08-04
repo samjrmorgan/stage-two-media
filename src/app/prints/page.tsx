@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Container } from "@/components/Container";
 import { Kicker } from "@/components/Kicker";
 import { Reveal } from "@/components/Reveal";
 import { PrintsGrid } from "@/components/PrintsGrid";
 import { prints } from "@/lib/prints";
+
+const PRINTS_PAGE_ENABLED = false;
 
 export const metadata: Metadata = {
   title: "Fine Art Photography Prints",
@@ -12,6 +15,10 @@ export const metadata: Metadata = {
 };
 
 export default function PrintsPage() {
+  if (!PRINTS_PAGE_ENABLED) {
+    notFound();
+  }
+
   return (
     <div className="bg-black pt-40 pb-24 md:pb-32">
       <Container>
