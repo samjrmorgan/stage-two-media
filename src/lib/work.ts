@@ -277,6 +277,7 @@ export const workProjects: WorkProject[] = [
     category: "Long-Form Interview",
     filter: "Documentary & Legacy",
     kind: "film",
+    vimeoId: "925261552",
     year: "2024",
     location: "Los Angeles, USA",
     summary:
