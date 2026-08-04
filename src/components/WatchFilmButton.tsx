@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { VimeoEmbed } from "./VimeoEmbed";
 
 export function WatchFilmButton({
@@ -11,6 +12,9 @@ export function WatchFilmButton({
   title: string;
 }) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (!open) return;
@@ -38,7 +42,7 @@ export function WatchFilmButton({
         Watch the film
       </button>
 
-      {open && (
+      {mounted && open && createPortal(
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 backdrop-blur-sm p-4 md:p-10"
           onClick={() => setOpen(false)}
@@ -63,7 +67,8 @@ export function WatchFilmButton({
             </div>
             <VimeoEmbed idOrUrl={vimeoId} title={title} autoplay />
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
