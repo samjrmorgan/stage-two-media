@@ -117,13 +117,24 @@ export default async function WorkCaseStudy({
             <h1 className="font-display text-4xl md:text-7xl text-offwhite max-w-3xl">
               {project.title}
             </h1>
+            {project.vimeoId && (
+              <a
+                href="#film"
+                className="mt-6 inline-flex items-center gap-2.5 rounded-full border border-offwhite/40 bg-black/30 backdrop-blur-sm px-5 py-2.5 text-sm text-offwhite hover:bg-offwhite hover:text-black hover:border-offwhite transition-colors cursor-pointer"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                Watch the film
+              </a>
+            )}
           </Reveal>
         </Container>
       </section>
 
       {/* Film */}
       {project.vimeoId && (
-        <section className="pt-16 md:pt-24">
+        <section id="film" className="pt-16 md:pt-24 scroll-mt-24">
           <Container>
             <Reveal>
               <VimeoEmbed idOrUrl={project.vimeoId} title={`${project.title} - Stage Two`} />
