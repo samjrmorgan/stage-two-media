@@ -35,6 +35,7 @@ const offerings = [
     caseStudyHref: "/work/zero-to-100",
     image: "/images/work/dillen/dillen-01.jpg",
     alt: "A man in traditional white Emirati dress shielding his eyes while walking across desert dunes",
+    servicePageSlugs: ["documentary"],
   },
   {
     number: "03",
@@ -46,6 +47,7 @@ const offerings = [
     caseStudyHref: "/work/ben-and-mirjam",
     image: "/images/work/weddings/weddings-13.jpg",
     alt: "A bride walking down the aisle arm-in-arm with her father",
+    servicePageSlugs: ["wedding-videography"],
   },
   {
     number: "04",
@@ -68,6 +70,7 @@ const offerings = [
     caseStudyHref: "/work/nexus-logistics",
     image: "/images/work/nexus-logistics/nexus-logistics-02.jpg",
     alt: "A reach-stacker branded with the Nexus Logistics logo lifting a shipping container",
+    servicePageSlugs: ["corporate-video", "aerial-videography"],
   },
   {
     number: "06",
@@ -183,6 +186,23 @@ export default function ServicesPage() {
                       Case study - {o.caseStudy}.
                     </Link>
                   </p>
+                  {o.servicePageSlugs && o.servicePageSlugs.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {o.servicePageSlugs.map((slug) => {
+                        const sp = servicePages.find((p) => p.slug === slug);
+                        if (!sp) return null;
+                        return (
+                          <Link
+                            key={slug}
+                            href={`/services/${slug}`}
+                            className="inline-flex items-center rounded-full border border-white/15 px-4 py-1.5 text-xs text-offwhite/80 hover:border-accent hover:text-accent transition-colors cursor-pointer"
+                          >
+                            {sp.h1}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  )}
                 </div>
               </div>
             </Reveal>
@@ -239,35 +259,6 @@ export default function ServicesPage() {
                     </div>
                   </div>
                 </a>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Explore by service */}
-      <section className="mt-24 md:mt-32 border-t border-white/10 pt-24 md:pt-32">
-        <Container>
-          <Reveal>
-            <Kicker>Explore by Service</Kicker>
-            <h2 className="font-display text-4xl md:text-6xl text-offwhite max-w-2xl mb-14">
-              Looking for something specific?
-            </h2>
-          </Reveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {servicePages.map((p, i) => (
-              <Reveal key={p.slug} delay={i * 80}>
-                <Link
-                  href={`/services/${p.slug}`}
-                  className="group block rounded-md border border-white/10 bg-black p-8 transition-colors hover:bg-navy cursor-pointer"
-                >
-                  <h3 className="font-display text-2xl text-offwhite mb-3 transition-colors group-hover:text-accent">
-                    {p.h1}
-                  </h3>
-                  <p className="text-sm text-offwhite/70 leading-relaxed max-w-md">
-                    {p.metaDescription}
-                  </p>
-                </Link>
               </Reveal>
             ))}
           </div>
