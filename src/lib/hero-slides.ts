@@ -52,8 +52,8 @@ export const heroSlides: HeroSlide[] = [
     alt: "Close portrait of a child's eyes, Sierra Leone",
   },
   {
-    src: "/images/work/mca-wallaroos/mca-wallaroos-01.jpg",
-    alt: "Wallaroos players on the pitch at GIO Stadium, Canberra",
+    src: "/images/work/mca-wallaroos/mca-wallaroos-09.jpg",
+    alt: "Three Wallaroos players standing arms crossed on the pitch at GIO Stadium, Canberra, in front of the 'A Career in Australian Mining' big screen",
   },
   {
     src: "/images/work/advocacy/advocacy-08.jpg",
