@@ -22,6 +22,8 @@ export type WorkProject = {
   vimeoId?: string;
   /** ISO 8601 duration (e.g. "PT2M30S") for the embedded film - leave undefined if unknown. */
   videoDuration?: string;
+  /** Shows a "Stage Two Original" badge on grid cards. */
+  isOriginal?: boolean;
   year: string;
   location: string;
   summary: string;
@@ -247,6 +249,7 @@ export const workProjects: WorkProject[] = [
     filter: "Documentary & Legacy",
     kind: "film",
     vimeoId: "1199282820",
+    isOriginal: true,
     featured: true,
     year: "2025",
     location: "New Zealand",
@@ -286,6 +289,7 @@ export const workProjects: WorkProject[] = [
     filter: "Documentary & Legacy",
     kind: "film",
     vimeoId: "925261552",
+    isOriginal: true,
     year: "2024",
     location: "Los Angeles, USA",
     summary:

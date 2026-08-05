@@ -17,9 +17,16 @@ export function WorkGridCard({ project, priority = false }: { project: WorkProje
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/40" />
 
-        <span className="absolute top-4 left-4 rounded-full bg-black/60 backdrop-blur-sm px-3 py-1 text-[11px] uppercase tracking-[0.12em] text-offwhite/90">
-          {project.filter}
-        </span>
+        <div className="absolute top-4 left-4 flex flex-col items-start gap-2">
+          <span className="rounded-full bg-black/60 backdrop-blur-sm px-3 py-1 text-[11px] uppercase tracking-[0.12em] text-offwhite/90">
+            {project.filter}
+          </span>
+          {project.isOriginal && (
+            <span className="rounded-full bg-accent/80 backdrop-blur-sm px-3 py-1 text-[11px] uppercase tracking-[0.12em] text-offwhite">
+              Stage Two Original
+            </span>
+          )}
+        </div>
 
         <span className="absolute inset-0 flex items-center justify-center">
           <span
