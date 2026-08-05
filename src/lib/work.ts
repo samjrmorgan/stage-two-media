@@ -384,6 +384,7 @@ export const workProjects: WorkProject[] = [
     category: "Brand Film & Photography",
     filter: "Brand Stories",
     kind: "film",
+    vimeoId: "1215650317/a959907d6c",
     featured: true,
     year: "2026",
     location: "Auckland, New Zealand",

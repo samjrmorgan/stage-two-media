@@ -6,7 +6,7 @@ import { Container } from "@/components/Container";
 import { Kicker } from "@/components/Kicker";
 import { Reveal } from "@/components/Reveal";
 import { WorkGridCard } from "@/components/WorkGridCard";
-import { extractVimeoId } from "@/components/VimeoEmbed";
+import { buildVimeoEmbedUrl } from "@/components/VimeoEmbed";
 import { WatchFilmButton } from "@/components/WatchFilmButton";
 import { CaseStudyFloatNav } from "@/components/CaseStudyFloatNav";
 import { getWorkProject, workProjects } from "@/lib/work";
@@ -75,7 +75,7 @@ export default async function WorkCaseStudy({
         thumbnailUrl: [`${BASE_URL}${project.cover.src}`],
         uploadDate: `${project.year}-01-01`,
         ...(project.videoDuration ? { duration: project.videoDuration } : {}),
-        embedUrl: `https://player.vimeo.com/video/${extractVimeoId(project.vimeoId)}`,
+        embedUrl: buildVimeoEmbedUrl(project.vimeoId),
         publisher: {
           "@type": "Organization",
           name: "Stage Two Media",
