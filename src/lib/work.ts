@@ -263,6 +263,10 @@ export const workProjects: WorkProject[] = [
       src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-11.jpg",
       alt: "Rider giving a thumbs up from a motorcycle mid-race",
     },
+    gridCover: {
+      src: "/images/work/documentary-zero-to-100/zero-to-100-4x5-cover.jpg",
+      alt: "Zero to 100 movie poster featuring a veteran rider and a vintage BSA motorcycle",
+    },
     gallery: [
       { src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-11.jpg", alt: "Rider giving a thumbs up mid-race" },
       { src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-06.jpg", alt: "Motorcycles racing on track" },
