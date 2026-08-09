@@ -6,30 +6,33 @@ const budgets = ["Under $2k", "$2k–$10k", "$10k–$50k", "$50k+", "Not sure ye
 
 export function ContactForm() {
   const [budget, setBudget] = useState(budgets[0]);
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    const name = data.get("name");
-    const email = data.get("email");
-    const message = data.get("message");
+    setStatus("sending");
 
-    const body = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      `Budget: ${budget}`,
-      "",
-      message,
-    ].join("\n");
-
-    const mailto = `mailto:sam@stagetwo.media?subject=${encodeURIComponent(
-      `New project enquiry from ${name}`
-    )}&body=${encodeURIComponent(body)}`;
-
-    window.location.href = mailto;
-    setSent(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          budget,
+          message: data.get("message"),
+        }),
+      });
+      if (res.ok) {
+        form.reset();
+        setBudget(budgets[0]);
+      }
+      setStatus(res.ok ? "sent" : "error");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -98,21 +101,28 @@ export function ContactForm() {
         />
       </div>
 
-      <button
-        type="submit"
-        className="self-start inline-flex items-center justify-center rounded-lg bg-offwhite text-black px-8 py-4 text-sm font-medium transition-transform hover:scale-[1.03] cursor-pointer"
-      >
-        Send enquiry
-      </button>
-
-      {sent && (
-        <p className="text-sm text-offwhite/70" role="status">
-          Opening your email app to send this through - if nothing happened,
-          email us directly at{" "}
+      {status === "error" && (
+        <p className="text-sm text-accent" role="status">
+          Something went wrong sending that. Please try again, or email us
+          directly at{" "}
           <a href="mailto:sam@stagetwo.media" className="underline underline-offset-4">
             sam@stagetwo.media
           </a>
           .
+        </p>
+      )}
+
+      <button
+        type="submit"
+        disabled={status === "sending"}
+        className="self-start inline-flex items-center justify-center rounded-lg bg-offwhite text-black px-8 py-4 text-sm font-medium transition-transform hover:scale-[1.03] disabled:opacity-60 disabled:hover:scale-100 cursor-pointer"
+      >
+        {status === "sending" ? "Sending..." : "Send enquiry"}
+      </button>
+
+      {status === "sent" && (
+        <p className="text-sm text-offwhite/70" role="status">
+          Thanks! We&apos;ve got your enquiry and will be in touch soon.
         </p>
       )}
     </form>
