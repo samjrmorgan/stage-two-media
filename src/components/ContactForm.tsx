@@ -105,8 +105,8 @@ export function ContactForm() {
         <p className="text-sm text-accent" role="status">
           Something went wrong sending that. Please try again, or email us
           directly at{" "}
-          <a href="mailto:sam@stagetwo.media" className="underline underline-offset-4">
-            sam@stagetwo.media
+          <a href="mailto:enquiries@stagetwo.media" className="underline underline-offset-4">
+            enquiries@stagetwo.media
           </a>
           .
         </p>

@@ -15,7 +15,7 @@ const columns = [
   {
     heading: "Contact",
     links: [
-      { href: "mailto:sam@stagetwo.media", label: "sam@stagetwo.media" },
+      { href: "mailto:enquiries@stagetwo.media", label: "enquiries@stagetwo.media" },
       { href: "tel:+64212262822", label: "+64 21 226 2822" },
     ],
   },
@@ -39,7 +39,7 @@ export function Footer() {
             <Mark variant="offwhite" className="h-8 w-8 mb-6" />
             <p className="font-display text-2xl leading-tight max-w-xs">
               Got a project? <br />
-              <a href="mailto:sam@stagetwo.media" className="text-accent hover:underline">
+              <a href="mailto:enquiries@stagetwo.media" className="text-accent hover:underline">
                 Let&apos;s talk.
               </a>
             </p>

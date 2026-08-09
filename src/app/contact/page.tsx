@@ -56,10 +56,10 @@ export default function ContactPage() {
                   </dt>
                   <dd>
                     <a
-                      href="mailto:sam@stagetwo.media"
+                      href="mailto:enquiries@stagetwo.media"
                       className="text-offwhite hover:text-accent transition-colors cursor-pointer"
                     >
-                      sam@stagetwo.media
+                      enquiries@stagetwo.media
                     </a>
                   </dd>
                 </div>
