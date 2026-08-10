@@ -65,7 +65,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <dt className="text-steel uppercase tracking-[0.15em] text-xs mb-1">
-                    Phone
+                    Phone / WhatsApp
                   </dt>
                   <dd>
                     <a
