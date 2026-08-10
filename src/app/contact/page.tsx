@@ -129,7 +129,7 @@ export default function ContactPage() {
                 Our Ethos
               </span>
             </div>
-            <p className="text-2xl md:text-4xl max-w-3xl leading-snug">
+            <p className="font-display text-2xl md:text-4xl max-w-3xl leading-snug">
               <span className="text-offwhite font-semibold">
                 We produce content that makes people feel,
               </span>{" "}
