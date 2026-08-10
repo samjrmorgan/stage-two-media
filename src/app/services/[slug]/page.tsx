@@ -26,9 +26,13 @@ export async function generateMetadata({
   return {
     title: page.metaTitle,
     description: page.metaDescription,
+    alternates: {
+      canonical: `/services/${page.slug}`,
+    },
     openGraph: {
       title: page.metaTitle,
       description: page.metaDescription,
+      url: `${BASE_URL}/services/${page.slug}`,
       images: [{ url: page.heroImage.src }],
     },
   };
@@ -62,12 +66,31 @@ export default async function ServiceSubPage({
     ],
   };
 
+  const faqJsonLd =
+    page.faqs && page.faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: page.faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }
+      : null;
+
   return (
     <div className="bg-black pt-40 pb-24 md:pb-32">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
           <Reveal>
@@ -126,6 +149,48 @@ export default async function ServiceSubPage({
                 </Reveal>
               ))}
             </div>
+          </div>
+        )}
+
+        {page.faqs && page.faqs.length > 0 && (
+          <div className="mt-24 md:mt-32 border-t border-white/10 pt-16 md:pt-24">
+            <Reveal>
+              <Kicker>FAQs</Kicker>
+              <h2 className="font-display text-3xl md:text-5xl text-offwhite mb-12">
+                Good to know.
+              </h2>
+            </Reveal>
+            <dl className="max-w-2xl flex flex-col divide-y divide-white/10">
+              {page.faqs.map((faq, i) => (
+                <Reveal key={faq.q} delay={i * 60}>
+                  <div className="py-6">
+                    <dt className="font-display text-xl text-offwhite">{faq.q}</dt>
+                    <dd className="mt-3 text-offwhite/70 leading-relaxed">{faq.a}</dd>
+                  </div>
+                </Reveal>
+              ))}
+            </dl>
+          </div>
+        )}
+
+        {page.relatedLinks && page.relatedLinks.length > 0 && (
+          <div className="mt-16 md:mt-20">
+            <Reveal>
+              <span className="text-xs uppercase tracking-[0.15em] text-steel">
+                Related reading
+              </span>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {page.relatedLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="inline-flex items-center rounded-full border border-white/15 px-4 py-1.5 text-xs text-offwhite/80 hover:border-accent hover:text-accent transition-colors cursor-pointer"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </Reveal>
           </div>
         )}
 
