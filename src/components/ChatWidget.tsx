@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Mark } from "./Logo";
 
 type ChatMessage = { role: "user" | "assistant"; content: string };
 
@@ -160,14 +161,7 @@ export function ChatWidget() {
             <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
         ) : (
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
-            <path
-              d="M4 12C4 7.58 8.03 4 13 4C17.97 4 22 7.58 22 12C22 16.42 17.97 20 13 20C11.75 20 10.56 19.78 9.48 19.38L4 21L5.5 16.8C4.55 15.44 4 13.78 4 12Z"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <Mark variant="black" className="h-6 w-6" />
         )}
       </button>
     </div>
