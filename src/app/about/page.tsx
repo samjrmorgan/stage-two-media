@@ -6,6 +6,7 @@ import { Kicker } from "@/components/Kicker";
 import { Reveal } from "@/components/Reveal";
 import { WorldMap } from "@/components/WorldMap";
 import { AnimatedNumber } from "@/components/AnimatedNumber";
+import { ScrollSaturateImage } from "@/components/ScrollSaturateImage";
 import {
   googleReviews,
   googleReviewsAverage,
@@ -185,7 +186,7 @@ export default function AboutPage() {
                 <div className="group rounded-md border border-white/10 bg-black overflow-hidden">
                   <div className="relative aspect-[4/5] bg-gradient-to-br from-black via-navy to-warmnavy overflow-hidden">
                     {p.image ? (
-                      <Image
+                      <ScrollSaturateImage
                         src={p.image}
                         alt={p.imageAlt}
                         fill
