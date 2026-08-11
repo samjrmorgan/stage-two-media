@@ -20,9 +20,13 @@ export function ScrollSaturateImage(props: ImageProps) {
       if (!el) return;
       const rect = el.getBoundingClientRect();
       const vh = window.innerHeight;
-      const start = vh; // top of image at bottom of viewport -> fully grayscale
-      const end = vh * 0.35; // top of image near upper third -> fully saturated
-      const progress = Math.min(1, Math.max(0, (start - rect.top) / (start - end)));
+      // Progress = how much of the image's own height is currently visible.
+      // Ramps up while entering from below, plateaus at 1 while fully on
+      // screen, then ramps back down as it exits off the top.
+      const visibleTop = Math.max(rect.top, 0);
+      const visibleBottom = Math.min(rect.bottom, vh);
+      const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+      const progress = rect.height > 0 ? Math.min(1, visibleHeight / rect.height) : 0;
       setStyle({
         filter: `grayscale(${Math.round((1 - progress) * 100)}%)`,
         transition: "none",
