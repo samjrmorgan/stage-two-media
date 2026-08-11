@@ -27,8 +27,19 @@ export function ScrollSaturateImage(props: ImageProps) {
       const visibleBottom = Math.min(rect.bottom, vh);
       const visibleHeight = Math.max(0, visibleBottom - visibleTop);
       const progress = rect.height > 0 ? Math.min(1, visibleHeight / rect.height) : 0;
+
+      // Parallax: shift the image within its frame based on how far its
+      // centre sits from the viewport centre, so it pans slowly as the
+      // page scrolls past. Scaled up 1.15x first so panning never reveals
+      // an edge.
+      const elementCenter = rect.top + rect.height / 2;
+      const offsetRatio = Math.max(-0.5, Math.min(0.5, (vh / 2 - elementCenter) / vh));
+      const maxShift = rect.height * 0.08;
+      const translateY = offsetRatio * 2 * maxShift;
+
       setStyle({
         filter: `grayscale(${Math.round((1 - progress) * 100)}%)`,
+        transform: `scale(1.15) translateY(${translateY.toFixed(1)}px)`,
         transition: "none",
       });
     }
