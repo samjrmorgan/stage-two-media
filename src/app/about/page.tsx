@@ -255,7 +255,6 @@ export default function AboutPage() {
                 </p>
                 <div className="mt-6">
                   <p className="text-offwhite text-sm font-medium">{r.name}</p>
-                  <p className="text-steel text-xs mt-0.5">{r.timeAgo}</p>
                 </div>
               </Reveal>
             ))}
