@@ -279,6 +279,24 @@ export const journalPosts: JournalPost[] = [
       alt: "Stage Two crew filming pitchside with a gimbal rig",
     },
   },
+  {
+    slug: "video-production-for-ngos-and-charities",
+    publishedAt: "2026-08-13",
+    title: "Video production for NGOs and charities: what actually matters",
+    tag: "Craft",
+    excerpt:
+      "Humanitarian and advocacy work is most of what we do. Here's what we've learned about making it work for NGO budgets.",
+    body: [
+      "Most of our documentary work has been for humanitarian and advocacy clients - multi-country films for World Vision across Vietnam, Cambodia, Senegal, Sierra Leone and Ghana, pro bono work for the Sir Peter Blake Foundation, and campaign films for advocacy groups. It's become the core of what we do, not a side project.",
+      "The brief is different from a commercial shoot. Budgets are tighter and usually donor-funded, timelines are set by the field trip rather than a studio calendar, and the story has to hold up as evidence as well as emotion - it needs to be honest about the people and the place, not just polished.",
+      "That's why we run field shoots solo wherever we can: one operator handling filming, sound and a first pass of the edit on location, with full post-production finished back in the studio. It keeps the crew's footprint small around vulnerable subjects, and it keeps the budget realistic for an NGO client without cutting corners on the finished film.",
+      "If you're briefing an advocacy or appeal film, come with the story and the constraints - we'll tell you honestly what's achievable inside them.",
+    ],
+    cover: {
+      src: "/images/work/documentary-senegal/documentary-senegal-03.jpg",
+      alt: "Women washing hands together, Senegal",
+    },
+  },
 ];
 
 export function getJournalPost(slug: string) {
