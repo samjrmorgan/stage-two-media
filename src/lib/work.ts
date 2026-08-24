@@ -375,6 +375,10 @@ export const workProjects: WorkProject[] = [
       src: "/images/work/nexus-logistics/nexus-logistics-02.jpg",
       alt: "A reach-stacker branded with the Nexus Logistics logo lifting a shipping container",
     },
+    gridCover: {
+      src: "/images/work/nexus-logistics/nexus-logistics-4x5-cover.jpg",
+      alt: "Nexus Logistics branded crane arm lifting a shipping container in the yard",
+    },
     gallery: [
       { src: "/images/work/nexus-logistics/nexus-logistics-01.jpg", alt: "Aerial view of the container yard, with rail lines beyond" },
       { src: "/images/work/nexus-logistics/nexus-logistics-02.jpg", alt: "A reach-stacker branded with the Nexus Logistics logo lifting a shipping container" },
