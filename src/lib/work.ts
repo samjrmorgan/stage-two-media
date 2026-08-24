@@ -416,7 +416,7 @@ export const workProjects: WorkProject[] = [
     },
     gridCover: {
       src: "/images/work/luxury-cruising/luxury-cruising-4x5-cover.jpg",
-      alt: "Aerial view of the superyacht Liberté cutting through the water",
+      alt: "Liberté superyacht poster: aerial shot of the vessel underway, with the Luxury Cruising New Zealand logo",
     },
     gallery: [
       { src: "/images/work/luxury-cruising/luxury-cruising-01.jpg", alt: "Liberté cruising past an island near Auckland" },
