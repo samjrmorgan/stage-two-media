@@ -519,6 +519,10 @@ export const workProjects: WorkProject[] = [
       src: "/images/work/mca-wallaroos/mca-wallaroos-09.jpg",
       alt: "Three Wallaroos players standing arms crossed on the pitch at GIO Stadium, Canberra, in front of the 'A Career in Australian Mining' big screen",
     },
+    gridCover: {
+      src: "/images/work/mca-wallaroos/mca-wallaroos-4x5-cover.jpg",
+      alt: "Wallaroos players standing arms crossed on the pitch at GIO Stadium, Canberra, in front of the 'A Career in Australian Mining' big screen",
+    },
     gallery: [
       { src: "/images/work/mca-wallaroos/mca-wallaroos-01.jpg", alt: "Three Wallaroos players on the pitch at GIO Stadium, Canberra" },
       { src: "/images/work/mca-wallaroos/mca-wallaroos-02.jpg", alt: "Players walking onto the pitch with the campaign screen behind them" },
