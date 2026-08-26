@@ -169,8 +169,57 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Five pillars */}
+      {/* Featured work */}
       <section className="bg-black py-24 md:py-32">
+        <Container>
+          <Reveal>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+              <div>
+                <Kicker>Selected Work</Kicker>
+                <h2 className="font-display text-4xl md:text-6xl text-offwhite max-w-2xl">
+                  Stories we&apos;re proud
+                  <br />
+                  to have told.
+                </h2>
+              </div>
+              <Link
+                href="/work"
+                className="hidden md:inline-flex items-center gap-2 text-sm text-offwhite/70 hover:text-offwhite transition-colors cursor-pointer shrink-0"
+              >
+                View full portfolio
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </Link>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {workProjects
+              .filter((project) => project.featured)
+              .map((project, i) => (
+                <Reveal key={project.slug} delay={i * 80}>
+                  <WorkGridCard project={project} priority={i === 0} />
+                </Reveal>
+              ))}
+          </div>
+
+          <Reveal>
+            <Link
+              href="/work"
+              className="md:hidden mt-10 inline-flex items-center gap-2 text-sm text-offwhite/70 hover:text-offwhite transition-colors cursor-pointer"
+            >
+              View full portfolio
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Link>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* Five pillars */}
+      <section className="bg-black pb-24 md:pb-32">
         <Container>
           <Reveal>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
@@ -225,55 +274,6 @@ export default function Home() {
               );
             })}
           </div>
-        </Container>
-      </section>
-
-      {/* Featured work */}
-      <section className="bg-black pb-24 md:pb-32">
-        <Container>
-          <Reveal>
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
-              <div>
-                <Kicker>Selected Work</Kicker>
-                <h2 className="font-display text-4xl md:text-6xl text-offwhite max-w-2xl">
-                  Stories we&apos;re proud
-                  <br />
-                  to have told.
-                </h2>
-              </div>
-              <Link
-                href="/work"
-                className="hidden md:inline-flex items-center gap-2 text-sm text-offwhite/70 hover:text-offwhite transition-colors cursor-pointer shrink-0"
-              >
-                View full portfolio
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
-                  <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </Link>
-            </div>
-          </Reveal>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {workProjects
-              .filter((project) => project.featured)
-              .map((project, i) => (
-                <Reveal key={project.slug} delay={i * 80}>
-                  <WorkGridCard project={project} priority={i === 0} />
-                </Reveal>
-              ))}
-          </div>
-
-          <Reveal>
-            <Link
-              href="/work"
-              className="md:hidden mt-10 inline-flex items-center gap-2 text-sm text-offwhite/70 hover:text-offwhite transition-colors cursor-pointer"
-            >
-              View full portfolio
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
-                <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </Link>
-          </Reveal>
         </Container>
       </section>
 
