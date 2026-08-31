@@ -65,7 +65,7 @@ export const workProjects: WorkProject[] = [
     },
     gridCover: {
       src: "/images/work/documentary-ghana/ghana-4x5-cover.jpg",
-      alt: "Four girls in patterned dresses seated on stone ruins under a stormy sky, Ghana",
+      alt: "Four girls in patterned dresses seated on stone ruins under a stormy sky, Ghana, with the World Vision logo",
     },
     gallery: [
       { src: "/images/work/documentary-ghana/documentary-ghana-03.jpg", alt: "Silhouette in a doorway, Ghana" },
