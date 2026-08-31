@@ -339,7 +339,7 @@ export const workProjects: WorkProject[] = [
     },
     gridCover: {
       src: "/images/work/weddings/ben-mirjam-4x5-cover.jpg",
-      alt: "Bride and groom walking hand in hand through confetti",
+      alt: "Ben & Mirjam poster: bride and groom smiling arm in arm through confetti",
     },
     gallery: [
       { src: "/images/work/weddings/weddings-06.jpg", alt: "Bride and groom embracing in golden light" },
