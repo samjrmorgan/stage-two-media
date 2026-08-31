@@ -377,7 +377,7 @@ export const workProjects: WorkProject[] = [
     },
     gridCover: {
       src: "/images/work/nexus-logistics/nexus-logistics-4x5-cover.jpg",
-      alt: "Nexus Logistics branded crane arm lifting a shipping container in the yard",
+      alt: "A Nexus Logistics branded truck parked in the container yard, with a plane overhead",
     },
     gallery: [
       { src: "/images/work/nexus-logistics/nexus-logistics-01.jpg", alt: "Aerial view of the container yard, with rail lines beyond" },
