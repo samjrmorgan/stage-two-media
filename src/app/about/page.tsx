@@ -67,9 +67,7 @@ export default function AboutPage() {
         <Reveal>
           <Kicker>About</Kicker>
           <h1 className="font-display text-5xl md:text-7xl text-offwhite max-w-3xl">
-            Stage: the set.
-            <br />
-            Two: what we shoot.
+            Meet Stage Two
           </h1>
           <p className="mt-6 max-w-2xl text-offwhite/70 text-lg leading-relaxed">
             The name is literal. &ldquo;Stage&rdquo; for the sound stage, &ldquo;Two&rdquo;
