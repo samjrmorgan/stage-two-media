@@ -14,22 +14,22 @@ const process = [
   {
     number: "01",
     title: "Enquiry",
-    copy: "Tell us about your project, purpose, timeline and budget.",
+    copy: "Tell us about your project, purpose, timeline and budget",
   },
   {
     number: "02",
     title: "Discovery call",
-    copy: "We talk through what you want your audience to feel, and what it'll take to get there.",
+    copy: "We talk through what you want your audience to feel, and what it'll take to get there",
   },
   {
     number: "03",
     title: "Proposal & booking",
-    copy: "A clear quote and scope, a 50% deposit, and a date locked in.",
+    copy: "A clear quote and scope, a 50% deposit, and a date locked in",
   },
   {
     number: "04",
     title: "Production & delivery",
-    copy: "We shoot, edit and deliver - with feedback rounds built in along the way.",
+    copy: "We shoot, edit and deliver - with feedback rounds built in along the way",
   },
 ];
 

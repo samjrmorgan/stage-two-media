@@ -152,7 +152,7 @@ export default function Home() {
           <Reveal delay={200}>
             <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
               <p className="text-sm max-w-sm">
-                We make people feel, because when people feel, they act.
+                We produce content that makes people feel, when people feel, they take action.
               </p>
               <Link
                 href="/about"
