@@ -70,15 +70,62 @@ export default function AboutPage() {
             Meet Stage Two
           </h1>
           <p className="mt-6 max-w-2xl text-offwhite/70 text-lg leading-relaxed">
-            The name is literal. &ldquo;Stage&rdquo; for the sound stage, &ldquo;Two&rdquo;
-            for the two disciplines we operate across - video production and
-            photography. Everything else is built around one idea: high-end
-            production shouldn&apos;t only be available to businesses with
-            high-end budgets.
+            The studio operates as a two-person team - Sam and Ellie -
+            allowing lean operations from pre-production through delivery.
+            For larger projects, we scale with trusted freelance talent while
+            maintaining quality standards.
           </p>
         </Reveal>
 
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+        {/* Meet the team */}
+        <div className="mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-14">
+            <Reveal>
+              <Kicker>The Team</Kicker>
+              <h2 className="font-display text-4xl md:text-6xl text-offwhite">
+                Meet Stage Two.
+              </h2>
+            </Reveal>
+            <Reveal delay={100}>
+              <p className="text-offwhite/70 leading-relaxed md:text-lg">
+                A two-person crew with most of the skills a bigger studio would
+                need - which means fewer handoffs, and a lot more care.
+              </p>
+            </Reveal>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {team.map((p, i) => (
+              <Reveal key={p.name} delay={i * 100}>
+                <div className="group rounded-md border border-white/10 bg-black overflow-hidden">
+                  <div className="relative aspect-[4/5] bg-gradient-to-br from-black via-navy to-warmnavy overflow-hidden">
+                    {p.image ? (
+                      <ScrollSaturateImage
+                        src={p.image}
+                        alt={p.imageAlt}
+                        fill
+                        sizes="(min-width: 768px) 50vw, 100vw"
+                        className="object-cover grayscale scale-100 transition-all duration-500 ease-out group-hover:grayscale-0 group-hover:scale-105"
+                      />
+                    ) : (
+                      <span className="absolute inset-0 flex items-center justify-center font-display text-8xl text-white/10">
+                        {p.initials}
+                      </span>
+                    )}
+                  </div>
+                  <div className="p-8">
+                    <h3 className="font-display text-2xl text-offwhite">{p.name}</h3>
+                    <p className="text-xs uppercase tracking-[0.15em] text-steel mt-1 mb-4">
+                      {p.title}
+                    </p>
+                    <p className="text-sm text-offwhite/70 leading-relaxed">{p.bio}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-24 md:mt-32 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           <Reveal className="relative aspect-[4/3] overflow-hidden rounded-md">
             <Image
               src="/images/about/sam-airport-departure.jpg"
@@ -157,54 +204,6 @@ export default function AboutPage() {
                 <p className="mt-3 text-sm text-steel max-w-[16rem] mx-auto sm:mx-0">
                   {s.label}
                 </p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-
-        {/* Meet the team */}
-        <div className="mt-24 md:mt-32">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-14">
-            <Reveal>
-              <Kicker>The Team</Kicker>
-              <h2 className="font-display text-4xl md:text-6xl text-offwhite">
-                Meet Stage Two.
-              </h2>
-            </Reveal>
-            <Reveal delay={100}>
-              <p className="text-offwhite/70 leading-relaxed md:text-lg">
-                A two-person crew with most of the skills a bigger studio would
-                need - which means fewer handoffs, and a lot more care.
-              </p>
-            </Reveal>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {team.map((p, i) => (
-              <Reveal key={p.name} delay={i * 100}>
-                <div className="group rounded-md border border-white/10 bg-black overflow-hidden">
-                  <div className="relative aspect-[4/5] bg-gradient-to-br from-black via-navy to-warmnavy overflow-hidden">
-                    {p.image ? (
-                      <ScrollSaturateImage
-                        src={p.image}
-                        alt={p.imageAlt}
-                        fill
-                        sizes="(min-width: 768px) 50vw, 100vw"
-                        className="object-cover grayscale scale-100 transition-all duration-500 ease-out group-hover:grayscale-0 group-hover:scale-105"
-                      />
-                    ) : (
-                      <span className="absolute inset-0 flex items-center justify-center font-display text-8xl text-white/10">
-                        {p.initials}
-                      </span>
-                    )}
-                  </div>
-                  <div className="p-8">
-                    <h3 className="font-display text-2xl text-offwhite">{p.name}</h3>
-                    <p className="text-xs uppercase tracking-[0.15em] text-steel mt-1 mb-4">
-                      {p.title}
-                    </p>
-                    <p className="text-sm text-offwhite/70 leading-relaxed">{p.bio}</p>
-                  </div>
-                </div>
               </Reveal>
             ))}
           </div>
