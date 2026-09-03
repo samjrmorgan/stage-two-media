@@ -119,37 +119,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="mt-24 md:mt-32 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <Reveal className="relative aspect-[4/3] overflow-hidden rounded-md">
-            <Image
-              src="/images/about/sam-airport-departure.jpg"
-              alt="Sam Morgan smiling at an airport, backpack loaded, departing on assignment"
-              fill
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </Reveal>
-          <Reveal delay={100}>
-            <p className="font-display text-2xl md:text-3xl leading-[1.3] text-offwhite mb-6">
-              Stage Two runs lean from pre-production through final
-              delivery - a huge cost saving for clients who&apos;d otherwise
-              need to hire an entire crew. For larger productions, we bring
-              on trusted freelance talent and scale up without losing the
-              studio&apos;s standards.
-            </p>
-            <p className="text-offwhite/70 leading-relaxed">
-              The goal is simple: make world-class content production
-              available to businesses of any size, then keep proving it with
-              our own work - like{" "}
-              <Link href="/work/zero-to-100" className="text-offwhite underline underline-offset-4 hover:text-accent transition-colors">
-                Zero to 100
-              </Link>
-              , a documentary we made because we wanted to, not
-              because a client asked.
-            </p>
-          </Reveal>
-        </div>
-
         {/* Values */}
         <div className="mt-24 md:mt-32">
           <Reveal>
