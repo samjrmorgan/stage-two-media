@@ -223,7 +223,7 @@ export default function Home() {
           <Reveal>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
               <div>
-                <Kicker>What We Make</Kicker>
+                <Kicker>What We Produce</Kicker>
                 <h2 className="font-display text-4xl md:text-6xl text-offwhite max-w-2xl">
                   The kinds of stories
                   <br />
