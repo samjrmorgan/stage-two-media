@@ -48,7 +48,7 @@ const SITE_JSON_LD = {
         "Award-winning Auckland video and photography production studio specialising in documentary, advocacy, corporate, brand and wedding films - shot on location worldwide.",
       telephone: "+64 21 226 2822",
       email: "enquiries@stagetwo.media",
-      foundingDate: "2024-02",
+      foundingDate: "2023-02",
       founder: [
         { "@type": "Person", name: "Sam Morgan" },
         { "@type": "Person", name: "Ellie Harwood" },

@@ -92,10 +92,10 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={100}>
             <p className="font-display text-2xl md:text-3xl leading-[1.3] text-offwhite mb-6">
-              Founder and director Sam Morgan has spent a decade in video
-              production and photography, teaching himself every pillar of
-              the craft along the way. Today the studio is run by two - Sam
-              and Ellie.
+              Founder and director Sam Morgan started out teaching himself
+              every pillar of video production and photography. Today the
+              studio is run by two - Sam and Ellie - with over 15 years of
+              combined experience between them.
             </p>
             <p className="text-offwhite/70 leading-relaxed mb-4">
               That means Stage Two can run lean from pre-production through

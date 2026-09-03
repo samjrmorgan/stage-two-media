@@ -140,13 +140,12 @@ export default function Home() {
           </Reveal>
           <Reveal delay={100}>
             <blockquote className="font-display text-3xl md:text-5xl leading-[1.2] max-w-4xl">
-              We believe the most powerful stories are human. People connect
-              with faces, emotion, and a clear journey they can see
+              We&apos;re passionate about connecting with people and telling
+              real, human stories. We know from experience that people
+              connect with faces, emotion, and a journey they can see
               themselves in.{" "}
               <span className="text-steel">
-                We create cinematic stories that make people feel, remember
-                and act - because when storytelling is done well, it leads to
-                better outcomes.
+                When storytelling is done well, it leads to better outcomes.
               </span>
             </blockquote>
           </Reveal>
