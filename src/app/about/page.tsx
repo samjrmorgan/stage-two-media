@@ -66,9 +66,23 @@ export default function AboutPage() {
       <Container>
         <Reveal>
           <Kicker>About</Kicker>
-          <h1 className="font-display text-5xl md:text-7xl text-offwhite max-w-3xl">
-            Meet Stage Two
+          <h1 className="mt-6 max-w-2xl text-offwhite/70 text-lg leading-relaxed font-sans font-normal">
+            Stage Two runs lean from pre-production through final
+            delivery - a huge cost saving for clients who&apos;d otherwise
+            need to hire an entire crew. For larger productions, we bring
+            on trusted freelance talent and scale up without losing the
+            studio&apos;s standards.
           </h1>
+          <p className="mt-4 max-w-2xl text-offwhite/70 text-lg leading-relaxed">
+            The goal is simple: make world-class content production
+            available to businesses of any size, then keep proving it with
+            our own work - like{" "}
+            <Link href="/work/zero-to-100" className="text-offwhite underline underline-offset-4 hover:text-accent transition-colors">
+              Zero to 100
+            </Link>
+            , a documentary we made because we wanted to, not
+            because a client asked.
+          </p>
         </Reveal>
 
         {/* Meet the team */}
