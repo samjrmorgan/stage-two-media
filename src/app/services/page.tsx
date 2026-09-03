@@ -88,7 +88,7 @@ const offerings = [
 const process = [
   { step: "Brief", copy: "A short call to understand the story, the budget, and the deadline." },
   { step: "Plan", copy: "Locations, shot list, and a crew sized to the brief - often just our two-person team." },
-  { step: "Shoot", copy: "On location, on schedule, with an eye for the moments you didn't storyboard." },
+  { step: "Shoot", copy: "On location, on schedule, with an eye for the organic moments that weren't planned." },
   { step: "Deliver", copy: "Graded, mixed, and exported to spec - with a fast first-cut turnaround." },
 ];
 
