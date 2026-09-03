@@ -18,7 +18,7 @@ export default function WorkPage() {
         <Reveal>
           <Kicker>Our Work</Kicker>
           <h1 className="font-display text-5xl md:text-7xl text-offwhite max-w-3xl">
-            Stories worth telling.
+            Stories we&apos;re proud of.
           </h1>
           <p className="mt-6 max-w-xl text-offwhite/70">
             A selection of the human stories we&apos;ve been trusted to tell -
