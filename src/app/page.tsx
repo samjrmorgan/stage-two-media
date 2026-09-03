@@ -281,9 +281,11 @@ export default function Home() {
                 house, run by two.
               </h2>
               <p className="mt-5 text-steel leading-relaxed max-w-md">
-                Sam Morgan and Ellie Harwood shoot, direct, edit, colour grade
-                and deliver - video and photography together, moving fast and
-                getting close enough to a story to make it real.
+                Sam and Ellie shoot, direct, edit, colour grade and deliver
+                video and photography together, moving fast and getting close
+                enough to a story to make it real. This means your experience
+                is intimate - you work directly with us throughout the entire
+                project.
               </p>
               <ul className="mt-8 flex flex-col gap-3">
                 {splitList.map((item) => (
@@ -297,7 +299,7 @@ export default function Home() {
                 href="/about"
                 className="mt-8 inline-flex items-center gap-2 text-sm font-medium border-b border-black pb-1 hover:gap-3 transition-all cursor-pointer"
               >
-                Meet the team
+                Learn more about Sam and Ellie here
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
                   <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
