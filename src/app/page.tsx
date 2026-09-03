@@ -221,20 +221,13 @@ export default function Home() {
       <section className="bg-black pb-24 md:pb-32">
         <Container>
           <Reveal>
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
-              <div>
-                <Kicker>What We Produce</Kicker>
-                <h2 className="font-display text-4xl md:text-6xl text-offwhite max-w-2xl">
-                  The kinds of stories
-                  <br />
-                  we&apos;re built for.
-                </h2>
-              </div>
-              <p className="max-w-sm text-offwhite/70 text-sm">
-                We stopped trying to be a production company for everything.
-                These are the stories we chase, and the work we&apos;re
-                proudest to put our name on.
-              </p>
+            <div className="mb-14">
+              <Kicker>What We Produce</Kicker>
+              <h2 className="font-display text-4xl md:text-6xl text-offwhite max-w-2xl">
+                The kinds of stories
+                <br />
+                we&apos;re built for.
+              </h2>
             </div>
           </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
