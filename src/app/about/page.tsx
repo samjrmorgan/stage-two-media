@@ -66,13 +66,16 @@ export default function AboutPage() {
       <Container>
         <Reveal>
           <Kicker>About</Kicker>
-          <h1 className="mt-6 max-w-2xl text-offwhite/70 text-lg leading-relaxed font-sans font-normal">
+          <h1 className="font-display text-5xl md:text-7xl text-offwhite max-w-3xl">
+            Meet Stage Two
+          </h1>
+          <p className="mt-6 max-w-2xl text-offwhite/70 text-lg leading-relaxed">
             Stage Two runs lean from pre-production through final
             delivery - a huge cost saving for clients who&apos;d otherwise
             need to hire an entire crew. For larger productions, we bring
             on trusted freelance talent and scale up without losing the
             studio&apos;s standards.
-          </h1>
+          </p>
           <p className="mt-4 max-w-2xl text-offwhite/70 text-lg leading-relaxed">
             The goal is simple: make world-class content production
             available to businesses of any size, then keep proving it with
@@ -90,9 +93,6 @@ export default function AboutPage() {
           <div className="mb-14">
             <Reveal>
               <Kicker>The Team</Kicker>
-              <h2 className="font-display text-4xl md:text-6xl text-offwhite">
-                Meet Stage Two.
-              </h2>
               <p className="mt-6 max-w-2xl text-offwhite/70 text-lg leading-relaxed">
                 The studio operates as a two-person team - Sam and Ellie -
                 allowing lean operations from pre-production through
