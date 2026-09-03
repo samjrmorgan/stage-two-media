@@ -75,6 +75,23 @@ export default function AboutPage() {
             For larger projects, we scale with trusted freelance talent while
             maintaining quality standards.
           </p>
+          <p className="mt-4 max-w-2xl text-offwhite/70 text-lg leading-relaxed">
+            That means Stage Two can run lean from pre-production through
+            final delivery - a huge cost saving for clients who&apos;d
+            otherwise need to hire an entire crew. For larger productions,
+            we bring on trusted freelance talent and scale up without
+            losing the studio&apos;s standards.
+          </p>
+          <p className="mt-4 max-w-2xl text-offwhite/70 text-lg leading-relaxed">
+            The goal is simple: make world-class content production
+            available to businesses of any size, then keep proving it with
+            our own work - like{" "}
+            <Link href="/work/zero-to-100" className="text-offwhite underline underline-offset-4 hover:text-accent transition-colors">
+              Zero to 100
+            </Link>
+            , a documentary we made because we wanted to, not
+            because a client asked.
+          </p>
         </Reveal>
 
         {/* Meet the team */}
@@ -130,28 +147,11 @@ export default function AboutPage() {
             />
           </Reveal>
           <Reveal delay={100}>
-            <p className="font-display text-2xl md:text-3xl leading-[1.3] text-offwhite mb-6">
+            <p className="font-display text-2xl md:text-3xl leading-[1.3] text-offwhite">
               Founder and director Sam Morgan started out teaching himself
               every pillar of video production and photography. Today the
               studio is run by two - Sam and Ellie - with over 15 years of
               combined experience between them.
-            </p>
-            <p className="text-offwhite/70 leading-relaxed mb-4">
-              That means Stage Two can run lean from pre-production through
-              final delivery - a huge cost saving for clients who&apos;d
-              otherwise need to hire an entire crew. For larger productions,
-              we bring on trusted freelance talent and scale up without
-              losing the studio&apos;s standards.
-            </p>
-            <p className="text-offwhite/70 leading-relaxed">
-              The goal is simple: make world-class content production
-              available to businesses of any size, then keep proving it with
-              our own work - like{" "}
-              <Link href="/work/zero-to-100" className="text-offwhite underline underline-offset-4 hover:text-accent transition-colors">
-                Zero to 100
-              </Link>
-              , a documentary we made because we wanted to, not
-              because a client asked.
             </p>
           </Reveal>
         </div>
