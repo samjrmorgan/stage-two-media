@@ -79,18 +79,12 @@ export default function AboutPage() {
 
         {/* Meet the team */}
         <div className="mt-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-14">
+          <div className="mb-14">
             <Reveal>
               <Kicker>The Team</Kicker>
               <h2 className="font-display text-4xl md:text-6xl text-offwhite">
                 Meet Stage Two.
               </h2>
-            </Reveal>
-            <Reveal delay={100}>
-              <p className="text-offwhite/70 leading-relaxed md:text-lg">
-                A two-person crew with most of the skills a bigger studio would
-                need - which means fewer handoffs, and a lot more care.
-              </p>
             </Reveal>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
