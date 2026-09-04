@@ -92,9 +92,9 @@ export default function Home() {
           <Reveal delay={200}>
             <p className="mt-6 max-w-xl text-base md:text-lg text-offwhite/80">
               Stage Two is a human-centred production company creating
-              cinematic film and photography for stories that deserve to be
-              felt - for organisations, couples and communities who care
-              about people, purpose, and moments that matter.
+              cinematic film and photography for people, businesses and
+              communities who care deeply about what they do, who they do
+              it for, and why it matters.
             </p>
           </Reveal>
           <Reveal delay={300}>
