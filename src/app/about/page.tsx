@@ -26,21 +26,6 @@ const stats = [
   { value: 405000, suffix: "km+", label: "Distance travelled to produce content" },
 ];
 
-const values = [
-  {
-    title: "Quality",
-    copy: "Every deliverable is graded, mixed and finished to the same standard, whatever the budget behind it.",
-  },
-  {
-    title: "Minimal",
-    copy: "A small footprint on set and a restrained edit - the story leads, not the production.",
-  },
-  {
-    title: "Passionate",
-    copy: "Zero to 100 exists because we'll make things nobody asked for, just to prove they're worth making.",
-  },
-];
-
 const team = [
   {
     initials: "SM",
@@ -128,21 +113,6 @@ export default function AboutPage() {
                     <p className="text-sm text-offwhite/70 leading-relaxed">{p.bio}</p>
                   </div>
                 </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-
-        {/* Values */}
-        <div className="mt-24 md:mt-32">
-          <Reveal>
-            <Kicker>What We Value</Kicker>
-          </Reveal>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/10 rounded-md overflow-hidden mt-8">
-            {values.map((v, i) => (
-              <Reveal key={v.title} delay={i * 80} className="bg-black p-8">
-                <h3 className="font-display text-2xl text-offwhite mb-3">{v.title}</h3>
-                <p className="text-sm text-offwhite/70">{v.copy}</p>
               </Reveal>
             ))}
           </div>
