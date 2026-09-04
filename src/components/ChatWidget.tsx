@@ -13,19 +13,22 @@ const GREETING: ChatMessage = {
 
 const AUTO_OPEN_KEY = "s2-chat-auto-opened";
 const AUTO_OPEN_DELAY_MS = 10000;
+const TYPING_INDICATOR_DELAY_MS = 1000;
 
 export function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([GREETING]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showTyping, setShowTyping] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const userInteracted = useRef(false);
+  const typingTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
-  }, [messages, loading]);
+  }, [messages, showTyping]);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -39,6 +42,12 @@ export function ChatWidget() {
     }, AUTO_OPEN_DELAY_MS);
 
     return () => clearTimeout(id);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (typingTimeoutRef.current) clearTimeout(typingTimeoutRef.current);
+    };
   }, []);
 
   function toggleOpen() {
@@ -55,6 +64,9 @@ export function ChatWidget() {
     setInput("");
     setError(null);
     setLoading(true);
+    typingTimeoutRef.current = setTimeout(() => {
+      setShowTyping(true);
+    }, TYPING_INDICATOR_DELAY_MS);
 
     try {
       const res = await fetch("/api/chat", {
@@ -71,6 +83,8 @@ export function ChatWidget() {
     } catch {
       setError("Couldn't reach the chat right now. Please try again.");
     } finally {
+      if (typingTimeoutRef.current) clearTimeout(typingTimeoutRef.current);
+      setShowTyping(false);
       setLoading(false);
     }
   }
@@ -109,7 +123,7 @@ export function ChatWidget() {
                 {m.content}
               </div>
             ))}
-            {loading && (
+            {showTyping && (
               <div className="self-start rounded-lg bg-white/10 px-3 py-2 text-sm text-offwhite/60">
                 Typing…
               </div>
