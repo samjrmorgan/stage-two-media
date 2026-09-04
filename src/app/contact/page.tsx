@@ -124,9 +124,8 @@ export default function ContactPage() {
         <Container>
           <Reveal>
             <div className="flex items-center gap-3 mb-4">
-              <span className="h-px w-6 bg-steel" aria-hidden />
               <span className="text-xs uppercase tracking-[0.15em] text-steel">
-                Our Ethos
+                What we believe
               </span>
             </div>
             <p className="font-display text-2xl md:text-4xl max-w-3xl leading-snug">
