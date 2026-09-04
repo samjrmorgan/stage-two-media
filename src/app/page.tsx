@@ -158,7 +158,7 @@ export default function Home() {
                 href="/about"
                 className="inline-flex items-center gap-2 text-sm font-medium border-b border-black pb-1 hover:gap-3 transition-all cursor-pointer shrink-0"
               >
-                Our philosophy
+                Meet Stage Two
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
                   <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
