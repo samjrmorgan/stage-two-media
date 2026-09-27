@@ -17,7 +17,7 @@ import {
 export const metadata: Metadata = {
   title: "About Our Auckland Video Production Studio",
   description:
-    "Stage Two is an Auckland video production and photography studio making high-end content production accessible to any business, on any budget.",
+    "Stage Two is an Auckland video production and photography studio making high-end content production accessible to any business, on any budget. Our team is Safeguarding Essentials, UNICEF PSEA and UNDSS BSAFE certified for humanitarian and NGO fieldwork.",
 };
 
 const stats = [
@@ -34,6 +34,11 @@ const team = [
     bio: "Founder Sam Morgan has spent a decade developing expertise across every aspect of the craft. Sam leads creative direction, shooting, editing, colour and delivery on every Stage Two project - working off-the-cuff, reactive to what's actually happening in front of the camera, rather than a rigid storyboard.",
     image: "/images/team/sam-morgan-01.jpg",
     imageAlt: "Sam Morgan laughing while filming in the field, camera in hand",
+    credentials: [
+      { label: "Safeguarding Essentials Certified", badge: "/brand/certifications/safeguarding-essentials-hla.png" },
+      { label: "UNICEF PSEA Certified" },
+      { label: "UNDSS BSAFE Certified" },
+    ],
   },
   {
     initials: "EH",
@@ -42,6 +47,9 @@ const team = [
     bio: "Ellie has over 10 years of media and broadcasting experience and a psychology degree. She's been both on-camera and off-camera talent, hosts and produces multiple podcasts and has a passion for connecting with people and bringing their stories to life. Ellie leads client relationships, coordination and the business behind the work, bringing a psychology-informed approach to making people comfortable enough on camera to be genuinely themselves.",
     image: "/images/team/ellie-harwood-01.jpg",
     imageAlt: "Ellie Harwood holding a camera",
+    credentials: [
+      { label: "Safeguarding Essentials Certified", badge: "/brand/certifications/safeguarding-essentials-hla.png" },
+    ],
   },
 ];
 
@@ -111,6 +119,28 @@ export default function AboutPage() {
                       {p.title}
                     </p>
                     <p className="text-sm text-offwhite/70 leading-relaxed">{p.bio}</p>
+                    {p.credentials && (
+                      <div className="mt-4 flex flex-wrap items-center gap-2">
+                        {p.credentials.map((c) => (
+                          <span
+                            key={c.label}
+                            className="inline-flex items-center gap-1.5 rounded-full border border-white/15 px-3 py-1 text-xs text-offwhite/80"
+                          >
+                            {c.badge && (
+                              <Image
+                                src={c.badge}
+                                alt=""
+                                aria-hidden
+                                width={20}
+                                height={20}
+                                className="h-5 w-5 rounded-full"
+                              />
+                            )}
+                            {c.label}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </Reveal>

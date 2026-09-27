@@ -17,8 +17,8 @@ const offerings = [
   {
     number: "01",
     title: "Humanitarian & NGO Stories",
-    copy: "Stories of people, communities, impact, advocacy and change. We work with organisations who need footage and photography from the field - expeditions, programme visits, advocacy campaigns and fundraising appeals - told through the people living them, not stock-style production.",
-    tags: ["Field documentation", "Advocacy & appeal films", "Photography", "Social-first cutdowns"],
+    copy: "Stories of people, communities, impact, advocacy and change. We work with organisations who need footage and photography from the field - expeditions, programme visits, advocacy campaigns and fundraising appeals - told through the people living them, not stock-style production. Our crew is Safeguarding Essentials, UNICEF PSEA and UNDSS BSAFE certified, so you can bring us onto sensitive assignments with confidence.",
+    tags: ["Field documentation", "Advocacy & appeal films", "Photography", "Social-first cutdowns", "Safeguarding & PSEA certified"],
     idealFor: "NGOs, humanitarian organisations, advocacy groups, charities.",
     caseStudy: "World Vision",
     caseStudyHref: "/work/world-vision-ghana",

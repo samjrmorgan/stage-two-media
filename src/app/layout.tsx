@@ -50,8 +50,42 @@ const SITE_JSON_LD = {
       email: "enquiries@stagetwo.media",
       foundingDate: "2023-02",
       founder: [
-        { "@type": "Person", name: "Sam Morgan" },
-        { "@type": "Person", name: "Ellie Harwood" },
+        {
+          "@type": "Person",
+          name: "Sam Morgan",
+          hasCredential: [
+            {
+              "@type": "EducationalOccupationalCredential",
+              credentialCategory: "Certificate",
+              name: "Safeguarding Essentials",
+              recognizedBy: { "@type": "Organization", name: "Humanitarian Leadership Academy" },
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              credentialCategory: "Certificate",
+              name: "Prevention of Sexual Exploitation and Abuse (PSEA)",
+              recognizedBy: { "@type": "Organization", name: "UNICEF" },
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              credentialCategory: "Certificate",
+              name: "BSAFE",
+              recognizedBy: { "@type": "Organization", name: "United Nations Department of Safety and Security" },
+            },
+          ],
+        },
+        {
+          "@type": "Person",
+          name: "Ellie Harwood",
+          hasCredential: [
+            {
+              "@type": "EducationalOccupationalCredential",
+              credentialCategory: "Certificate",
+              name: "Safeguarding Essentials",
+              recognizedBy: { "@type": "Organization", name: "Humanitarian Leadership Academy" },
+            },
+          ],
+        },
       ],
       areaServed: [
         { "@type": "City", name: "Auckland" },
