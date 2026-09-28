@@ -99,6 +99,10 @@ export const workProjects: WorkProject[] = [
       src: "/images/work/documentary-sierra-leone/documentary-sierra-leone-08.jpg",
       alt: "Close portrait of a child's eyes, Sierra Leone",
     },
+    gridCover: {
+      src: "/images/work/documentary-sierra-leone/sierra-leone-4x5-cover.jpg",
+      alt: "Close, low-key portrait of a young child's face, Sierra Leone, with the World Vision logo",
+    },
     gallery: [
       { src: "/images/work/documentary-sierra-leone/documentary-sierra-leone-08.jpg", alt: "Close portrait of a child's eyes, Sierra Leone" },
       { src: "/images/work/documentary-sierra-leone/documentary-sierra-leone-09.jpg", alt: "Girls playing football, Sierra Leone" },
@@ -130,6 +134,10 @@ export const workProjects: WorkProject[] = [
     cover: {
       src: "/images/work/documentary-bangladesh/documentary-bangladesh-02.jpg",
       alt: "Girl holding an awareness campaign sign in a march, Bangladesh",
+    },
+    gridCover: {
+      src: "/images/work/documentary-bangladesh/bangladesh-4x5-cover.jpg",
+      alt: "Street scene in a Dhaka alley market with rickshaws and vendors, with the World Vision logo",
     },
     gallery: [
       { src: "/images/work/documentary-bangladesh/documentary-bangladesh-02.jpg", alt: "Girl holding an awareness campaign sign in a march, Bangladesh" },
@@ -164,6 +172,10 @@ export const workProjects: WorkProject[] = [
       src: "/images/work/documentary-senegal/documentary-senegal-05.jpg",
       alt: "Crowd of children waving and cheering, Senegal",
     },
+    gridCover: {
+      src: "/images/work/documentary-senegal/senegal-4x5-cover.jpg",
+      alt: "A crowd of children looking up at the camera, Senegal, with the World Vision logo",
+    },
     gallery: [
       { src: "/images/work/documentary-senegal/documentary-senegal-05.jpg", alt: "Crowd of children waving and cheering, Senegal" },
       { src: "/images/work/documentary-senegal/documentary-senegal-03.jpg", alt: "Women washing hands together, Senegal" },
@@ -197,6 +209,10 @@ export const workProjects: WorkProject[] = [
       src: "/images/work/documentary-cambodia/documentary-cambodia-07.jpg",
       alt: "Angkor Wat reflected in water at sunset, Cambodia",
     },
+    gridCover: {
+      src: "/images/work/documentary-cambodia/cambodia-4x5-cover.jpg",
+      alt: "Young monk in orange robes walking towards Angkor Wat at sunrise, with the World Vision logo",
+    },
     gallery: [
       { src: "/images/work/documentary-cambodia/documentary-cambodia-07.jpg", alt: "Angkor Wat reflected in water at sunset, Cambodia" },
       { src: "/images/work/documentary-cambodia/documentary-cambodia-04.jpg", alt: "Three schoolgirls in uniform, Cambodia" },
@@ -229,6 +245,10 @@ export const workProjects: WorkProject[] = [
     cover: {
       src: "/images/work/documentary-vietnam/documentary-vietnam-01.jpg",
       alt: "Girl cycling through a green rice field, Vietnam",
+    },
+    gridCover: {
+      src: "/images/work/documentary-vietnam/vietnam-4x5-cover.jpg",
+      alt: "Woman in traditional dress holding hands with a young girl in a rice paddy, both wearing conical hats, with the World Vision logo",
     },
     gallery: [
       { src: "/images/work/documentary-vietnam/documentary-vietnam-01.jpg", alt: "Girl cycling through a green rice field, Vietnam" },
@@ -304,6 +324,10 @@ export const workProjects: WorkProject[] = [
     cover: {
       src: "/images/work/harry-mack-interview/harry-mack-interview-01.jpg",
       alt: "Liam McEwan interviewing Harry Mack in a dressed studio set, Los Angeles",
+    },
+    gridCover: {
+      src: "/images/work/harry-mack-interview/harry-mack-4x5-cover.jpg",
+      alt: "Portrait of Harry Mack seated on a couch, surrounded by career memorabilia",
     },
     gallery: [
       { src: "/images/work/harry-mack-interview/harry-mack-interview-01.jpg", alt: "Liam McEwan interviewing Harry Mack in a dressed studio set, Los Angeles" },
@@ -451,6 +475,10 @@ export const workProjects: WorkProject[] = [
       src: "/images/work/presence-io/presence-io-01.jpg",
       alt: "A Presence team member looking out over Dubai Marina",
     },
+    gridCover: {
+      src: "/images/work/presence-io/presence-io-4x5-cover.jpg",
+      alt: "A man in traditional white Emirati dress adjusting his sunglasses on a desert dune",
+    },
     gallery: [
       { src: "/images/work/presence-io/presence-io-01.jpg", alt: "A Presence team member looking out over Dubai Marina" },
       { src: "/images/work/presence-io/presence-io-02.jpg", alt: "The Presence team lined up along the Dubai Marina waterfront" },
@@ -588,6 +616,10 @@ export const workProjects: WorkProject[] = [
     cover: {
       src: "/images/work/topham-guerin-dr/topham-guerin-dr-01.jpg",
       alt: "Aerial view of a coastal city in the Dominican Republic",
+    },
+    gridCover: {
+      src: "/images/work/topham-guerin-dr/topham-guerin-dr-4x5-cover.jpg",
+      alt: "An elderly man with a cane walking past a colmado storefront, Dominican Republic",
     },
     gallery: [
       { src: "/images/work/topham-guerin-dr/topham-guerin-dr-01.jpg", alt: "Aerial view of a coastal city in the Dominican Republic" },
