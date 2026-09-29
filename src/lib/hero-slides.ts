@@ -44,7 +44,7 @@ export const heroSlides: HeroSlide[] = [
     alt: "Silhouette of a woman in a doorway, Ghana",
   },
   {
-    src: "/images/work/weddings/weddings-06.jpg",
+    src: "/images/hero/ben-mirjam-upscaled.jpg",
     alt: "Bride and groom embracing in golden light",
   },
   {
