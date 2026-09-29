@@ -28,30 +28,57 @@ export function HeroSlideshow() {
 
   return (
     <div className="absolute inset-0">
-      {heroSlides.map((slide, i) => (
-        <Image
-          key={slide.src}
-          src={slide.src}
-          alt={slide.alt}
-          fill
-          priority={i === 0}
-          sizes="100vw"
-          className={`object-cover animate-kenburns transition-opacity duration-[1500ms] ease-in-out ${
-            i === index ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      ))}
+      {heroSlides.map((slide, i) => {
+        const fadeClass = `object-cover animate-kenburns transition-opacity duration-[1500ms] ease-in-out ${
+          i === index ? "opacity-100" : "opacity-0"
+        }`;
+
+        if (slide.mobileSrc) {
+          return (
+            <div key={slide.src} className="contents">
+              <Image
+                src={slide.mobileSrc}
+                alt={slide.mobileAlt ?? slide.alt}
+                fill
+                priority={i === 0}
+                sizes="100vw"
+                className={`md:hidden ${fadeClass}`}
+              />
+              <Image
+                src={slide.src}
+                alt={slide.alt}
+                fill
+                priority={i === 0}
+                sizes="100vw"
+                className={`hidden md:block ${fadeClass}`}
+              />
+            </div>
+          );
+        }
+
+        return (
+          <Image
+            key={slide.src}
+            src={slide.src}
+            alt={slide.alt}
+            fill
+            priority={i === 0}
+            sizes="100vw"
+            className={fadeClass}
+          />
+        );
+      })}
 
       {award && (
         <div
-          className={`absolute top-24 right-4 md:top-28 md:right-8 z-10 flex items-end gap-3 transition-opacity duration-[1500ms] ease-in-out ${
+          className={`absolute top-28 right-8 z-10 hidden items-end gap-3 transition-opacity duration-[1500ms] ease-in-out md:flex ${
             showAward ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
         >
           {award.badges.map((badge, i) => (
             <div
               key={badge.src}
-              className="relative h-16 w-16 md:h-20 md:w-20 animate-float"
+              className="relative h-20 w-20 animate-float"
               style={{
                 filter: "drop-shadow(0 8px 14px rgba(0,0,0,0.5))",
                 animationDelay: `${i * 0.4}s`,

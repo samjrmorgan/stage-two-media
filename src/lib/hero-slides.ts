@@ -1,6 +1,10 @@
 export type HeroSlide = {
   src: string;
+  /** Optional alternate image shown in place of `src` on narrow (mobile) viewports. */
+  mobileSrc?: string;
   alt: string;
+  /** Alt text for `mobileSrc`, when it depicts different content than `src`. */
+  mobileAlt?: string;
   award?: {
     label: string;
     detail: string;
@@ -11,7 +15,9 @@ export type HeroSlide = {
 export const heroSlides: HeroSlide[] = [
   {
     src: "/images/hero/primary-colours-senegal.jpg",
+    mobileSrc: "/images/hero/world-vision-bangladesh-ruby.jpg",
     alt: "\"Primary Colours of Senegal\" - a man walking past a red curtained doorway in a Senegalese village",
+    mobileAlt: "Portrait of a young woman in a teal shawl against a teal wall, partially framed by a curtain, Bangladesh",
     award: {
       label: "Award-winning photography",
       detail: "\"Primary Colours of Senegal\", shot on location with World Vision",

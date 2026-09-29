@@ -79,11 +79,11 @@ export default function Home() {
         </div>
 
         <Container className="relative h-full flex flex-col justify-end pb-20 md:pb-28 pt-32">
-          <Reveal>
+          <Reveal className="mt-3 md:mt-0">
             <Kicker>Video Production &amp; Photography - Auckland, NZ &amp; Worldwide</Kicker>
           </Reveal>
           <Reveal delay={100}>
-            <h1 className="font-display font-bold text-[13vw] leading-[0.88] tracking-tight md:text-[7vw] lg:text-[6.5rem] text-offwhite max-w-5xl">
+            <h1 className="font-display font-bold text-[11vw] leading-[0.88] tracking-tight md:text-[7vw] lg:text-[6.5rem] text-offwhite max-w-5xl">
               Immortalise
               <br />
               the moment.
@@ -117,7 +117,7 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal delay={380}>
-            <div className="mt-10 flex flex-wrap gap-2">
+            <div className="mt-10 flex flex-wrap gap-x-2 gap-y-3">
               {heroTags.map((tag) => (
                 <Link
                   key={tag}
