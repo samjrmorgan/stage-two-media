@@ -174,7 +174,7 @@ export const workProjects: WorkProject[] = [
     },
     gridCover: {
       src: "/images/work/documentary-senegal/senegal-4x5-cover.jpg",
-      alt: "A crowd of children looking up at the camera, Senegal, with the World Vision logo",
+      alt: "A crowd of cheering children waving in a schoolyard, Senegal, with the World Vision logo",
     },
     gallery: [
       { src: "/images/work/documentary-senegal/documentary-senegal-05.jpg", alt: "Crowd of children waving and cheering, Senegal" },
