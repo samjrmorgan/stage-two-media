@@ -32,8 +32,8 @@ export const heroSlides: HeroSlide[] = [
     },
   },
   {
-    src: "/images/hero/switzerland-alps-mountain-lake-landscape.jpg",
-    alt: "Cinematic aerial landscape of a turquoise alpine lake surrounded by the Swiss Alps",
+    src: "/images/hero/world-vision-bangladesh-ruby.jpg",
+    alt: "Portrait of a young woman in a teal shawl against a teal wall, partially framed by a curtain, Bangladesh",
   },
   {
     src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-11.jpg",
