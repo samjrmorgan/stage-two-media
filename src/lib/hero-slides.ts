@@ -48,7 +48,7 @@ export const heroSlides: HeroSlide[] = [
     alt: "Bride and groom embracing in golden light",
   },
   {
-    src: "/images/work/documentary-sierra-leone/documentary-sierra-leone-08.jpg",
+    src: "/images/hero/world-vision-sierra-leone-eyes.jpg",
     alt: "Close portrait of a child's eyes, Sierra Leone",
   },
   {
