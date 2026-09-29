@@ -20,7 +20,7 @@ export function HeroSlideshow() {
       setIndex((i) => (i + 1) % heroSlides.length);
     }, SLIDE_DURATION_MS);
     return () => clearInterval(id);
-  }, []);
+  }, [index]);
 
   const awardSlideIndex = heroSlides.findIndex((s) => s.award);
   const award = awardSlideIndex >= 0 ? heroSlides[awardSlideIndex].award : undefined;
@@ -62,6 +62,23 @@ export function HeroSlideshow() {
           ))}
         </div>
       )}
+
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 md:bottom-8 z-20 flex items-center gap-2">
+        {heroSlides.map((slide, i) => (
+          <button
+            key={slide.src}
+            type="button"
+            onClick={() => setIndex(i)}
+            aria-label={`Go to slide ${i + 1}`}
+            aria-current={i === index}
+            className={`h-1.5 cursor-pointer rounded-full transition-all duration-500 ease-out ${
+              i === index
+                ? "w-6 bg-offwhite"
+                : "w-1.5 bg-offwhite/40 hover:bg-offwhite/70"
+            }`}
+          />
+        ))}
+      </div>
     </div>
   );
 }
