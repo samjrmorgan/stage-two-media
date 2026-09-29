@@ -56,11 +56,7 @@ export const heroSlides: HeroSlide[] = [
     alt: "Three Wallaroos players standing arms crossed on the pitch at GIO Stadium, Canberra, in front of the 'A Career in Australian Mining' big screen",
   },
   {
-    src: "/images/work/advocacy/advocacy-08.jpg",
-    alt: "Advocacy production still, diver at sea",
-  },
-  {
-    src: "/images/work/luxury-cruising/luxury-cruising-01.jpg",
-    alt: "The superyacht Liberté cruising past an island near Auckland",
+    src: "/images/hero/mca-reef-snorkeler.jpg",
+    alt: "A snorkeler resting in a life ring on calm blue water",
   },
 ];
