@@ -67,12 +67,20 @@ export function Nav() {
           })}
         </nav>
 
-        <Link
-          href="/contact"
-          className="hidden md:inline-flex items-center rounded-lg bg-offwhite text-black px-5 py-2 text-sm font-medium transition-transform hover:scale-[1.03] cursor-pointer"
-        >
-          Start a project
-        </Link>
+        <div className="hidden md:flex items-center gap-3">
+          <Link
+            href="/work-with-us"
+            className="hidden lg:inline-flex items-center rounded-lg border border-offwhite/40 text-offwhite px-5 py-2 text-sm font-medium transition-colors hover:border-offwhite cursor-pointer"
+          >
+            Work with us
+          </Link>
+          <Link
+            href="/contact"
+            className="inline-flex items-center rounded-lg bg-offwhite text-black px-5 py-2 text-sm font-medium transition-transform hover:scale-[1.03] cursor-pointer"
+          >
+            Start a project
+          </Link>
+        </div>
 
         <button
           type="button"
@@ -113,6 +121,12 @@ export function Nav() {
               className="mt-6 inline-flex items-center justify-center rounded-lg bg-offwhite text-black px-5 py-3 text-sm font-medium"
             >
               Start a project
+            </Link>
+            <Link
+              href="/work-with-us"
+              className="mt-3 inline-flex items-center justify-center rounded-lg border border-offwhite/40 text-offwhite px-5 py-3 text-sm font-medium"
+            >
+              Work with us
             </Link>
           </Container>
         </div>
