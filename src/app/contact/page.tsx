@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/Container";
 import { Kicker } from "@/components/Kicker";
 import { Reveal } from "@/components/Reveal";
@@ -109,6 +110,16 @@ export default function ContactPage() {
                   </div>
                 ))}
               </div>
+              <p className="mt-6 text-sm text-steel leading-relaxed">
+                Still comparing studios?{" "}
+                <Link
+                  href="/journal/what-to-ask-before-hiring-a-video-production-company"
+                  className="text-offwhite underline underline-offset-4 hover:text-accent transition-colors cursor-pointer"
+                >
+                  What to ask before hiring a video production company
+                </Link>
+                .
+              </p>
             </Reveal>
           </div>
 

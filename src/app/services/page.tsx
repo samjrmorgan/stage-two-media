@@ -24,6 +24,7 @@ const offerings = [
     caseStudyHref: "/work/world-vision-ghana",
     image: "/images/work/documentary-ghana/documentary-ghana-13.jpg",
     alt: "Four young girls in colourful dresses standing together in Ghana",
+    servicePageSlugs: ["photography"],
   },
   {
     number: "02",
@@ -47,7 +48,7 @@ const offerings = [
     caseStudyHref: "/work/ben-and-mirjam",
     image: "/images/work/weddings/weddings-13.jpg",
     alt: "A bride walking down the aisle arm-in-arm with her father",
-    servicePageSlugs: ["wedding-videography"],
+    servicePageSlugs: ["wedding-videography", "photography"],
   },
   {
     number: "04",
@@ -207,6 +208,33 @@ export default function ServicesPage() {
               </div>
             </Reveal>
           ))}
+        </div>
+
+        {/* Service guides */}
+        <div className="mt-24 md:mt-32 border-t border-white/10 pt-16 md:pt-24">
+          <Reveal>
+            <Kicker>Service Guides</Kicker>
+            <h2 className="font-display text-4xl md:text-5xl text-offwhite max-w-2xl mb-10">
+              Looking for something specific?
+            </h2>
+          </Reveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {servicePages.map((sp, i) => (
+              <Reveal key={sp.slug} delay={i * 60}>
+                <Link
+                  href={`/services/${sp.slug}`}
+                  className="group block h-full rounded-md border border-white/10 p-6 transition-colors hover:border-accent cursor-pointer"
+                >
+                  <h3 className="font-display text-xl text-offwhite transition-colors group-hover:text-accent">
+                    {sp.h1}
+                  </h3>
+                  <p className="mt-3 text-sm text-steel leading-relaxed">
+                    {sp.tags.slice(0, 3).join(" · ")}
+                  </p>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </Container>
 

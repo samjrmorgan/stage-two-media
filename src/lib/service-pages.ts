@@ -103,6 +103,7 @@ export const servicePages: ServicePage[] = [
       { href: "/journal/how-much-does-a-corporate-video-cost-in-nz", label: "How much does a corporate video cost in NZ?" },
       { href: "/journal/what-to-ask-before-hiring-a-video-production-company", label: "What to ask before hiring a video production company" },
       { href: "/services/photography", label: "Brand & corporate photography" },
+      { href: "/services/aerial-videography", label: "Aerial & drone videography" },
     ],
   },
   {
@@ -143,6 +144,7 @@ export const servicePages: ServicePage[] = [
       { href: "/journal/five-countries-one-camera-bag", label: "Five countries, one camera bag" },
       { href: "/journal/the-gear-we-pack-for-a-solo-documentary-shoot", label: "The gear we pack for a solo documentary shoot" },
       { href: "/journal/why-we-made-zero-to-100", label: "Why we made Zero to 100" },
+      { href: "/journal/one-operator-vs-a-full-crew", label: "One operator vs. a full crew: when each makes sense" },
     ],
   },
   {
