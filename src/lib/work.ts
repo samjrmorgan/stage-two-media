@@ -295,10 +295,10 @@ export const workProjects: WorkProject[] = [
       { src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-06.jpg", alt: "Motorcycles racing on track" },
       { src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-12.jpg", alt: "Veteran rider smiling, thumbs up" },
       { src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-07.jpg", alt: "Close portrait through a racing helmet" },
-      { src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-01.jpg", alt: "Veteran in his workshop" },
+      { src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-les.jpg", alt: "Black and white portrait of Les Harris seated in his workshop, captioned 'Motorbikes are music.'" },
       { src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-08.jpg", alt: "Rider resting on a vintage sidecar" },
       { src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-04.jpg", alt: "Crowd watching riders at the starting line" },
-      { src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-09.jpg", alt: "Portrait in a workshop, evening light" },
+      { src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-olivia.jpg", alt: "Black and white portrait of Olivia Harris speaking in the workshop, captioned with her memory of her 97-year-old Poppy" },
     ],
   },
   {
