@@ -642,6 +642,8 @@ export const workProjects: WorkProject[] = [
     category: "Event Production",
     filter: "Events",
     kind: "film",
+    vimeoId: "1233866613",
+    videoDuration: "PT1M11S",
     year: "2024",
     location: "Wellington, New Zealand",
     summary:
@@ -656,6 +658,10 @@ export const workProjects: WorkProject[] = [
     cover: {
       src: "/images/work/idu-wellington/idu-wellington-01.jpg",
       alt: "A speaker addressing the 2024 IDU Forum Asia-Pacific from the keynote stage",
+    },
+    gridCover: {
+      src: "/images/work/idu-wellington/idu-wellington-4x5-cover.jpg",
+      alt: "Eight delegates standing together on stage at the 2024 IDU Forum Asia-Pacific in Wellington",
     },
     gallery: [
       { src: "/images/work/idu-wellington/idu-wellington-01.jpg", alt: "A speaker addressing the 2024 IDU Forum Asia-Pacific from the keynote stage" },
