@@ -283,8 +283,8 @@ export const workProjects: WorkProject[] = [
     ],
     services: ["Documentary Filming", "Directing", "Editing", "Colour Grade"],
     cover: {
-      src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-11.jpg",
-      alt: "Rider giving a thumbs up from a motorcycle mid-race",
+      src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-hero.jpg",
+      alt: "A rider leaning into a corner on a vintage number 20 racing motorcycle",
     },
     gridCover: {
       src: "/images/work/documentary-zero-to-100/zero-to-100-4x5-cover.jpg",

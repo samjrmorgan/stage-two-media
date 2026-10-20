@@ -42,8 +42,8 @@ export const heroSlides: HeroSlide[] = [
     alt: "Portrait of a young woman in a teal shawl against a teal wall, partially framed by a curtain, Bangladesh",
   },
   {
-    src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-11.jpg",
-    alt: "Rider giving a thumbs up mid-race, from Stage Two's documentary series Zero to 100",
+    src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-hero.jpg",
+    alt: "A rider leaning into a corner on a vintage number 20 racing motorcycle, from Stage Two's documentary Zero to 100",
   },
   {
     src: "/images/work/documentary-ghana/documentary-ghana-03.jpg",
