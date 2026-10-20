@@ -31,6 +31,8 @@ export type WorkProject = {
   description: string[];
   services: string[];
   cover: WorkImage;
+  /** Horizontal focal point (CSS percentage, e.g. "64%") for the case study hero on mobile, where the wide cover is cropped to a narrow window. Desktop stays centred. */
+  coverFocusMobile?: string;
   /** Optional alternate cover for grid cards (Home featured grid, /work grid, related-work) - falls back to `cover`. The case study hero always uses `cover`. */
   gridCover?: WorkImage;
   gallery: WorkImage[];
@@ -286,6 +288,7 @@ export const workProjects: WorkProject[] = [
       src: "/images/work/documentary-zero-to-100/documentary-zero-to-100-hero.jpg",
       alt: "A rider leaning into a corner on a vintage number 20 racing motorcycle",
     },
+    coverFocusMobile: "64%",
     gridCover: {
       src: "/images/work/documentary-zero-to-100/zero-to-100-4x5-cover.jpg",
       alt: "Zero to 100 movie poster featuring a veteran rider and a vintage BSA motorcycle",

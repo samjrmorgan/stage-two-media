@@ -109,7 +109,12 @@ export default async function WorkCaseStudy({
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-[var(--cover-focus,50%)_50%] md:object-center"
+          style={
+            project.coverFocusMobile
+              ? ({ "--cover-focus": project.coverFocusMobile } as React.CSSProperties)
+              : undefined
+          }
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/40" />
         <Container className="relative h-full flex flex-col justify-end pb-16 pt-32">
