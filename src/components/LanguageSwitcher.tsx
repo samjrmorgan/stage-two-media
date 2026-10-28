@@ -72,7 +72,7 @@ export function LanguageSwitcher({ variant = "menu" }: { variant?: "menu" | "pil
         className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-2 text-sm text-offwhite/80 transition-colors hover:text-offwhite cursor-pointer"
       >
         <Flag code={current} />
-        <span className="uppercase">{current}</span>
+        <span className="uppercase">{current.split("-")[0]}</span>
       </button>
       {open && (
         <ul

@@ -1,3 +1,12 @@
+function star(cx: number, cy: number, r: number, rotation: number) {
+  const points = Array.from({ length: 10 }, (_, i) => {
+    const radius = i % 2 === 0 ? r : r * 0.382;
+    const angle = ((rotation + i * 36 - 90) * Math.PI) / 180;
+    return `${(cx + radius * Math.cos(angle)).toFixed(2)},${(cy + radius * Math.sin(angle)).toFixed(2)}`;
+  });
+  return points.join(" ");
+}
+
 const flags: Record<string, React.ReactNode> = {
   en: (
     <>
@@ -55,6 +64,16 @@ const flags: Record<string, React.ReactNode> = {
       <rect y="7" width="30" height="6" fill="#fff" />
       <rect y="13" width="30" height="7" fill="#000" />
       <rect width="8" height="20" fill="#FF0000" />
+    </>
+  ),
+  "zh-CN": (
+    <>
+      <rect width="30" height="20" fill="#DE2910" />
+      <polygon points={star(5, 5, 3, 0)} fill="#FFDE00" />
+      <polygon points={star(10, 2, 1, 20)} fill="#FFDE00" />
+      <polygon points={star(12, 4, 1, 45)} fill="#FFDE00" />
+      <polygon points={star(12, 7, 1, 20)} fill="#FFDE00" />
+      <polygon points={star(10, 9, 1, 0)} fill="#FFDE00" />
     </>
   ),
 };

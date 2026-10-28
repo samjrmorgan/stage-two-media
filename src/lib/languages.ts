@@ -9,6 +9,7 @@ export const languages: Language[] = [
   { code: "pt", label: "Português" },
   { code: "nl", label: "Nederlands" },
   { code: "ar", label: "العربية" },
+  { code: "zh-CN", label: "中文" },
 ];
 
 export const translatedCodes = languages.filter((l) => l.code !== "en").map((l) => l.code);
@@ -16,8 +17,8 @@ export const translatedCodes = languages.filter((l) => l.code !== "en").map((l) 
 export function getCurrentLanguage(): string {
   if (typeof document === "undefined") return "en";
   const match = document.cookie.match(/(?:^|;\s*)googtrans=\/[a-z-]+\/([a-z-]+)/i);
-  const code = match?.[1]?.toLowerCase();
-  return code && translatedCodes.includes(code) ? code : "en";
+  const found = match?.[1]?.toLowerCase();
+  return translatedCodes.find((c) => c.toLowerCase() === found) ?? "en";
 }
 
 function clearTranslateCookie() {
