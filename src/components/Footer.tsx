@@ -75,7 +75,13 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-steel">
-          <p>© {new Date().getFullYear()} Stage Two Productions Ltd. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Stage Two Productions Ltd. All rights reserved.
+            <span className="mx-2 text-white/20" aria-hidden>
+              |
+            </span>
+            <span translate="no">NZBN 9429051422165</span>
+          </p>
           <p>Video Production &amp; Photography - Auckland, NZ &amp; worldwide.</p>
         </div>
       </Container>

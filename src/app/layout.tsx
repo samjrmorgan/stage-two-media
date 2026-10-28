@@ -42,6 +42,13 @@ const SITE_JSON_LD = {
       "@type": "LocalBusiness",
       "@id": "https://stagetwo.media/#business",
       name: "Stage Two Media",
+      legalName: "Stage Two Productions Ltd",
+      identifier: {
+        "@type": "PropertyValue",
+        propertyID: "NZBN",
+        name: "New Zealand Business Number",
+        value: "9429051422165",
+      },
       url: "https://stagetwo.media",
       logo: "https://stagetwo.media/brand/logo/primary-offwhite.svg",
       image: "https://stagetwo.media/images/hero/primary-colours-senegal.jpg",
