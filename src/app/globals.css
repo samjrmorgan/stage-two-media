@@ -30,8 +30,14 @@
   --color-surface: var(--surface);
   --color-border: var(--border);
 
-  --font-sans: var(--font-sans);
-  --font-display: var(--font-display);
+  --font-sans: "neue-haas-grotesk-display", var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+  --font-display: "neue-haas-grotesk-display", var(--font-alte-haas), var(--font-inter-tight), sans-serif;
+
+  /* Neue Haas Grotesk Display Pro (Adobe Fonts kit): Light 400, Roman 500, Medium 600, Bold 700 */
+  --font-weight-normal: 500;
+  --font-weight-medium: 600;
+  --font-weight-semibold: 700;
+  --font-weight-bold: 700;
 
   --breakpoint-xs: 22.5rem;
 }
@@ -75,7 +81,8 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-family: "neue-haas-grotesk-display", var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 500;
 }
 
 ::selection {
@@ -83,8 +90,15 @@ body {
   color: var(--color-offwhite);
 }
 
-.font-display {
-  font-family: var(--font-display), var(--font-sans), sans-serif;
+@layer components {
+  .font-eurostile {
+    font-family: "eurostile-extended", var(--font-alte-haas), var(--font-inter-tight), sans-serif;
+    font-weight: 900;
+  }
+  .font-display {
+    font-family: "neue-haas-grotesk-display", var(--font-alte-haas), var(--font-inter-tight), sans-serif;
+    font-weight: 600;
+  }
 }
 
 @keyframes kenburns {

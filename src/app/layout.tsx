@@ -136,6 +136,9 @@ export default function RootLayout({
       data-theme="dark"
       className={`${interTight.variable} ${alteHaas.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/fpm6idf.css" />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <script
           type="application/ld+json"

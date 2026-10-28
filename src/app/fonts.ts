@@ -5,8 +5,9 @@ export const interTight = localFont({
     { path: "../fonts/InterTight-Variable.ttf", style: "normal" },
     { path: "../fonts/InterTight-Italic-Variable.ttf", style: "italic" },
   ],
-  variable: "--font-sans",
+  variable: "--font-inter-tight",
   display: "swap",
+  preload: false,
 });
 
 export const alteHaas = localFont({
@@ -14,6 +15,7 @@ export const alteHaas = localFont({
     { path: "../fonts/AlteHaasGrotesk-Regular.ttf", weight: "400", style: "normal" },
     { path: "../fonts/AlteHaasGrotesk-Bold.ttf", weight: "700", style: "normal" },
   ],
-  variable: "--font-display",
+  variable: "--font-alte-haas",
   display: "swap",
+  preload: false,
 });
