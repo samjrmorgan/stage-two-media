@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 import { Container } from "./Container";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const links = [
   { href: "/work", label: "Work" },
@@ -68,6 +69,7 @@ export function Nav() {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
+          <LanguageSwitcher />
           <Link
             href="/work-with-us"
             className="hidden lg:inline-flex items-center rounded-lg border border-offwhite/40 text-offwhite px-5 py-2 text-sm font-medium transition-colors hover:border-offwhite cursor-pointer"
@@ -128,6 +130,10 @@ export function Nav() {
             >
               Work with us
             </Link>
+            <div className="mt-8 pt-6 border-t border-white/10">
+              <p className="mb-3 text-xs uppercase tracking-[0.15em] text-steel">Language</p>
+              <LanguageSwitcher variant="pills" />
+            </div>
           </Container>
         </div>
       )}

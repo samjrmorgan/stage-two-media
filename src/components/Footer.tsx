@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Mark } from "./Logo";
 import { Container } from "./Container";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const columns = [
   {
@@ -68,7 +69,12 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-steel">
+        <div className="mt-12">
+          <h3 className="text-xs uppercase tracking-[0.15em] text-steel mb-4">Language</h3>
+          <LanguageSwitcher variant="pills" />
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-steel">
           <p>© {new Date().getFullYear()} Stage Two Productions Ltd. All rights reserved.</p>
           <p>Video Production &amp; Photography - Auckland, NZ &amp; worldwide.</p>
         </div>

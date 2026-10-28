@@ -3,6 +3,7 @@ import { interTight, alteHaas } from "./fonts";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ChatWidget } from "@/components/ChatWidget";
+import { GoogleTranslate } from "@/components/GoogleTranslate";
 import "./globals.css";
 
 const OG_IMAGE = "/images/hero/primary-colours-senegal.jpg";
@@ -137,6 +138,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <ChatWidget />
+        <GoogleTranslate />
       </body>
     </html>
   );
