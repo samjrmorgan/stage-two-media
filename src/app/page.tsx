@@ -83,7 +83,7 @@ export default function Home() {
             <Kicker>Video Production &amp; Photography - Auckland, NZ &amp; Worldwide</Kicker>
           </Reveal>
           <Reveal delay={100}>
-            <h1 className="font-eurostile text-[9.5vw] leading-[1.02] md:text-[5.6vw] lg:text-[5.5rem] text-offwhite max-w-5xl">
+            <h1 className="font-eurostile text-[9.5vw] leading-[0.9] md:text-[5.6vw] lg:text-[5.5rem] text-offwhite max-w-5xl">
               Immortalise
               <br />
               the moment.
