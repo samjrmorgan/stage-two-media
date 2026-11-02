@@ -121,6 +121,8 @@ export const workProjects: WorkProject[] = [
     category: "Documentary / Advocacy",
     filter: "Humanitarian & NGO",
     kind: "film",
+    vimeoId: "1242259287",
+    videoDuration: "PT2M14S",
     year: "2023–2026",
     location: "Bangladesh",
     summary:
