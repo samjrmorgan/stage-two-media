@@ -78,7 +78,7 @@ export function LanguageSwitcher({ variant = "menu" }: { variant?: "menu" | "pil
         <ul
           role="listbox"
           aria-label="Language"
-          className="absolute right-0 top-full mt-2 w-44 overflow-hidden rounded-lg border border-white/10 bg-black/95 py-1 shadow-xl backdrop-blur-sm"
+          className="absolute right-0 top-full mt-2 max-h-[70vh] w-48 overflow-y-auto rounded-lg border border-white/10 bg-black/95 py-1 shadow-xl backdrop-blur-sm"
         >
           {languages.map((l) => (
             <li key={l.code} role="option" aria-selected={l.code === current}>

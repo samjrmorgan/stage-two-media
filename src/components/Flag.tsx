@@ -76,6 +76,48 @@ const flags: Record<string, React.ReactNode> = {
       <polygon points={star(10, 9, 1, 0)} fill="#FFDE00" />
     </>
   ),
+  hi: (
+    <>
+      <rect width="30" height="7" fill="#FF9933" />
+      <rect y="7" width="30" height="6" fill="#fff" />
+      <rect y="13" width="30" height="7" fill="#138808" />
+      <circle cx="15" cy="10" r="2.3" fill="none" stroke="#000080" strokeWidth="0.6" />
+      <path d="M15 7.7V12.3M12.7 10H17.3M13.4 8.4L16.6 11.6M16.6 8.4L13.4 11.6" stroke="#000080" strokeWidth="0.4" />
+    </>
+  ),
+  bn: (
+    <>
+      <rect width="30" height="20" fill="#006A4E" />
+      <circle cx="13.5" cy="10" r="4.5" fill="#F42A41" />
+    </>
+  ),
+  ur: (
+    <>
+      <rect width="30" height="20" fill="#01411C" />
+      <rect width="7.5" height="20" fill="#fff" />
+      <circle cx="19" cy="10" r="4.8" fill="#fff" />
+      <circle cx="20.6" cy="9" r="4.1" fill="#01411C" />
+      <polygon points={star(22.6, 7.6, 1.9, 20)} fill="#fff" />
+    </>
+  ),
+  id: (
+    <>
+      <rect width="30" height="10" fill="#E70011" />
+      <rect y="10" width="30" height="10" fill="#fff" />
+    </>
+  ),
+  ms: (
+    <>
+      <rect width="30" height="20" fill="#fff" />
+      {Array.from({ length: 7 }, (_, i) => (
+        <rect key={i} y={i * (20 / 7)} width="30" height={10 / 7} fill="#CC0001" />
+      ))}
+      <rect width="15" height="10.7" fill="#010066" />
+      <circle cx="5.6" cy="5.3" r="3.2" fill="#FFCC00" />
+      <circle cx="6.5" cy="5.3" r="2.6" fill="#010066" />
+      <polygon points={star(10, 5.3, 2.4, 0)} fill="#FFCC00" />
+    </>
+  ),
 };
 
 export function Flag({ code, className = "" }: { code: string; className?: string }) {

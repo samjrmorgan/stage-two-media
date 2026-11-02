@@ -10,6 +10,11 @@ export const languages: Language[] = [
   { code: "nl", label: "Nederlands" },
   { code: "ar", label: "العربية" },
   { code: "zh-CN", label: "中文" },
+  { code: "hi", label: "हिन्दी" },
+  { code: "bn", label: "বাংলা" },
+  { code: "ur", label: "اردو" },
+  { code: "id", label: "Bahasa Indonesia" },
+  { code: "ms", label: "Bahasa Melayu" },
 ];
 
 export const translatedCodes = languages.filter((l) => l.code !== "en").map((l) => l.code);
