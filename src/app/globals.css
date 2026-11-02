@@ -167,3 +167,47 @@ iframe.skiptranslate,
   background: none !important;
   box-shadow: none !important;
 }
+
+/* "Watch film" pill: a soft light travelling around the border */
+@property --watch-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes watch-orbit {
+  to {
+    --watch-angle: 360deg;
+  }
+}
+.watch-glow {
+  position: relative;
+}
+.watch-glow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(
+    from var(--watch-angle),
+    transparent 0deg,
+    transparent 240deg,
+    rgba(247, 246, 247, 0.18) 290deg,
+    rgba(247, 246, 247, 0.95) 350deg,
+    transparent 360deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  animation: watch-orbit 3.6s linear infinite;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.watch-glow:hover::before {
+  opacity: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .watch-glow::before {
+    animation: none;
+  }
+}

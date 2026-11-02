@@ -34,7 +34,7 @@ export function WatchFilmButton({
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="mt-6 inline-flex items-center gap-2.5 rounded-full border border-offwhite/40 bg-black/30 backdrop-blur-sm px-5 py-2.5 text-sm text-offwhite hover:bg-offwhite hover:text-black hover:border-offwhite transition-colors cursor-pointer"
+        className="watch-glow mt-6 inline-flex items-center gap-2.5 rounded-full border border-offwhite/40 bg-black/30 backdrop-blur-sm px-5 py-2.5 text-sm text-offwhite hover:bg-offwhite hover:text-black hover:border-offwhite transition-colors cursor-pointer"
       >
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
           <path d="M8 5v14l11-7z" />
